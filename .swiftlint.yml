@@ -1,0 +1,18 @@
+disabled_rules: 
+  - cyclomatic_complexity
+  - compiler_protocol_init
+  - force_cast
+  - colon
+  - comma
+  - control_statement
+  - identifier_name
+  - large_tuple
+opt_in_rules:
+  - empty_count
+included: 
+  - Sources/
+line_length: 150
+file_length:
+  warning: 500
+  error: 1200
+reporter: "xcode" 
