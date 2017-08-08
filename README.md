@@ -12,7 +12,8 @@ UIDevice extensions that fill in the missing pieces.
 # Intro
 `UIDeviceComplete` is an iOS library intended to be a collection of extensions to `UIDevice` 
 that provide functionality that `UIDevice` currently lacks like determining which iOS device
-you have (i.e iPhone SE, iPad Pro, iPhone7 etc)
+you have (i.e iPhone SE, iPad Pro, iPhone7 etc) or determining the screen size of the device
+in inches.
 
 # Features
 - [x] Detect specific device like iPhone 7, iPhone SE or iPad Pro
