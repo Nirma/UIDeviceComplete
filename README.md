@@ -101,6 +101,7 @@ If you use CocoaPods to manage your dependencies, simply add
 this line to your `Podfile`:
 
 ```
+use_frameworks!
 pod 'UIDeviceComplete'
 ```
 
