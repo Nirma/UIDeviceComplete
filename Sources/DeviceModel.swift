@@ -102,7 +102,7 @@ extension DeviceModel {
 
         switch (major, minor) {
         case (1, _):                          return .iPadFirstGen
-        case (2, 1), (2, 2), (2, 3), (2, 4):   return .iPadSecondGen
+        case (2, 1), (2, 2), (2, 3), (2, 4):  return .iPadSecondGen
         case (3, 1), (3, 2), (3, 3):          return .iPadThirdGen
         case (3, 4), (3, 5), (3, 6):          return .iPadFourthGen
         case (6, 11), (6, 12):                return .iPadFifthGen
