@@ -2,7 +2,7 @@
 UIDevice extensions that fill in the missing pieces.
 
 [![Build Status](https://travis-ci.org/Nirma/UIDeviceComplete.svg?branch=master)](https://travis-ci.org/Nirma/UIDeviceComplete)
-![Swift 3.1](https://img.shields.io/badge/Swift-3.1.1-orange.svg)
+![Swift 3.1](https://img.shields.io/badge/Swift-3.1-orange.svg)
 ![CodeCov](https://img.shields.io/codecov/c/github/Nirma/UIDeviceComplete.svg)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/UIDeviceComplete.svg)](#cocoapods)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -29,6 +29,12 @@ library extends onto `UIDevice` that way native methods of `UIDevice` and method
 easily be seen, also lowering the possibility of naming conflicts.
 
 
+### Getting common device name
+
+```swift 
+UIdevice.current.dc.commonDeviceName // iPad Pro (12.9 inch, Wi-Fi+LTE)
+```
+
 ### Detecting iOS Device models
 
 ```Swift
@@ -45,6 +51,7 @@ switch device {
         print("Not sure what this is...")
 }
 ```
+
 ### Detecting iOS Device Screen Size (Inches)
 
 Screen size can be be queried with the following computed property returning a simple `Double`
