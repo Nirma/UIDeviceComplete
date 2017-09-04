@@ -27,7 +27,7 @@ public extension UIDeviceComplete where Base == UIDevice {
 
     private var identifier: Identifier? {
         return System.name.flatMap {
-            return Identifier(identifier: $0)
+            return Identifier($0)
         }
     }
 
@@ -43,7 +43,7 @@ public extension UIDeviceComplete where Base == UIDevice {
 
     /// Common name for device i.e "iPhone 7 Plus"
     var commonDeviceName: String {
-        return "\(deviceModel)"
+        return identifier?.description ?? "unknown"
     }
 
     /// Device family iPhone
