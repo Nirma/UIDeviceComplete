@@ -5,6 +5,7 @@ UIDevice extensions that fill in the missing pieces.
 ![Swift 3.1](https://img.shields.io/badge/Swift-3.1-orange.svg)
 ![CodeCov](https://img.shields.io/codecov/c/github/Nirma/UIDeviceComplete.svg)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/UIDeviceComplete.svg)](#cocoapods)
+[![CocoaPods](https://img.shields.io/cocoapods/dt/UIDeviceComplete.svg)]()
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
  [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
