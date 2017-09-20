@@ -28,6 +28,8 @@ public enum DeviceModel {
     case iPhone6, iPhone6Plus, iPhone6S, iPhone6SPlus
     case iPhoneSE
     case iPhone7, iPhone7Plus
+    case iPhone8, iPhone8Plus
+    case iPhoneX
 
     case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen
 
@@ -73,19 +75,22 @@ extension DeviceModel {
               else { return .unknown }
 
         switch (major, minor) {
-        case (3, _):          return .iPhone4
-        case (4, _):          return .iPhone4S
-        case (5, 1), (5, 2):  return .iPhone5
-        case (5, 3), (5, 4):  return .iPhone5C
-        case (6, _):          return .iPhone5S
-        case (7, 2):          return .iPhone6
-        case (7, 1):          return .iPhone6Plus
-        case (8, 1):          return .iPhone6S
-        case (8, 2):          return .iPhone6SPlus
-        case (8, 4):          return .iPhoneSE
-        case (9, 1), (9, 3):  return .iPhone7
-        case (9, 2), (9, 4):  return .iPhone7Plus
-        default:              return .unknown
+        case (3, _):            return .iPhone4
+        case (4, _):            return .iPhone4S
+        case (5, 1), (5, 2):    return .iPhone5
+        case (5, 3), (5, 4):    return .iPhone5C
+        case (6, _):            return .iPhone5S
+        case (7, 2):            return .iPhone6
+        case (7, 1):            return .iPhone6Plus
+        case (8, 1):            return .iPhone6S
+        case (8, 2):            return .iPhone6SPlus
+        case (8, 4):            return .iPhoneSE
+        case (9, 1), (9, 3):    return .iPhone7
+        case (9, 2), (9, 4):    return .iPhone7Plus
+        case (10, 1), (10, 4):  return .iPhone8
+        case (10, 2), (10, 5):  return .iPhone8Plus
+        case (10, 3), (10, 6):  return .iPhoneX
+        default:                return .unknown
         }
     }
 }

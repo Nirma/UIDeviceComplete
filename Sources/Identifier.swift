@@ -129,6 +129,19 @@ extension Identifier: CustomStringConvertible {
             return "iPhone 4"
         case (1, 1):
             return "iPhone"
+        case (10, 1):
+            return "iPhone 8"
+        case (10, 2):
+            return "iPhone 8 Plus"
+        case (10, 3):
+            return "iPhone X"
+        case (10, 4):
+            return "iPhone 8"
+        case (10, 5):
+            return "iPhone 8 Plus"
+        case (10, 6):
+            return "iPhone X"
+        
         default:
             return "unknown"
         }
