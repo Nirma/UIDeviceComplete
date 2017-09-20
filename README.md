@@ -2,7 +2,7 @@
 UIDevice extensions that fill in the missing pieces.
 
 [![Build Status](https://travis-ci.org/Nirma/UIDeviceComplete.svg?branch=master)](https://travis-ci.org/Nirma/UIDeviceComplete)
-![Swift 3.1](https://img.shields.io/badge/Swift-3.1-orange.svg)
+![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)
 ![CodeCov](https://img.shields.io/codecov/c/github/Nirma/UIDeviceComplete.svg)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/UIDeviceComplete.svg)](#cocoapods)
 [![CocoaPods](https://img.shields.io/cocoapods/dt/UIDeviceComplete.svg)]()
