@@ -10,10 +10,10 @@ UIDevice extensions that fill in the missing pieces.
  [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
-# Intro
+# Whats this library about?
 `UIDeviceComplete` is an iOS library intended to be a collection of extensions to `UIDevice` 
 that provide functionality that `UIDevice` currently lacks like determining which iOS device
-you have (i.e iPhone SE, iPad Pro, iPhone7 etc) or determining the screen size of the device
+you have (i.e iPhone X, iPhone 8, iPhone SE, iPad Pro, iPhone7 etc) or determining the screen size of the device
 in inches.
 
 # Features
@@ -42,6 +42,8 @@ UIdevice.current.dc.commonDeviceName // iPad Pro (12.9 inch, Wi-Fi+LTE)
 let device = UIdevice.current.dc.deviceModel
 
 switch device {
+    case .iPhoneX:
+        print("So hows that iPhone X notch thing working out? Right...")
     case .iPhone6Plus, .iPhone7Plus:
         print("Lots of screen realestate eh?")
     case .iPhoneSE, .iPhone5, iPhone5S:
