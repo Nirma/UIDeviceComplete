@@ -1,7 +1,7 @@
 //
 // Identifier.swift
 //
-// Copyright (c) 2017 Nicholas Maccharoli
+// Copyright (c) 2017-2018 Nicholas Maccharoli
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -44,9 +44,9 @@ extension Identifier {
         }
         
         let numericCharacters: [String] = (0...9).map { "\($0)" }
-        let type = identifierString.characters.prefix(while: { !numericCharacters.contains(String($0))})
+        let type = identifierString.prefix(while: { !numericCharacters.contains(String($0))})
 
-        let version = identifierString.characters.suffix(from: type.endIndex)
+        let version = identifierString.suffix(from: type.endIndex)
             .split(separator: ",")
             .map { Int(String($0)) }
 
