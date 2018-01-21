@@ -42,7 +42,6 @@ public enum DeviceModel {
     case iPodTouchFirstGen, iPodTouchSecondGen, iPodTouchThirdGen,
          iPodTouchFourthGen, iPodTouchFifthGen, iPodTouchSixthGen
 
-    case simulator
     case unknown
 }
 
@@ -58,6 +57,8 @@ extension DeviceModel {
             self = DeviceModel.detectIpadModel(with: identifier)
         case .iPod:
             self = DeviceModel.detectIpodModel(with: identifier)
+        case .simulator:
+            self = DeviceModel.detectSimulatorModel()
         default:
             self = .unknown
         }
@@ -142,6 +143,42 @@ extension DeviceModel {
         case (5, 1):          return .iPodTouchFifthGen
         case (7, 1):          return .iPodTouchSixthGen
         default:              return .unknown
+        }
+    }
+}
+
+
+// MARK: Detecting Simulator Models
+
+extension DeviceModel {
+    fileprivate static func detectSimulatorModel() -> DeviceModel {
+        guard let versionInfo = ProcessInfo.processInfo.environment["SIMULATOR_VERSION_INFO"],
+            let startIdx = versionInfo.range(of: "DeviceType: ")?.upperBound else {
+                return .unknown
+        }
+        let deviceType = versionInfo[startIdx..<versionInfo.endIndex]
+        switch deviceType {
+        case "iPhone 4s":               return .iPhone4S
+        case "iPhone 5s":               return .iPhone5S
+        case "iPhone 6":                return .iPhone6
+        case "iPhone 6 Plus":           return .iPhone6Plus
+        case "iPhone 6s":               return .iPhone6S
+        case "iPhone 6s Plus":          return .iPhone6SPlus
+        case "iPhone SE":               return .iPhoneSE
+        case "iPhone 7":                return .iPhone7
+        case "iPhone 7 Plus":           return .iPhone7Plus
+        case "iPhone 8":                return .iPhone8
+        case "iPhone 8 Plus":           return .iPhone8Plus
+        case "iPhone X":                return .iPhoneX
+        case "iPad (5th generation)":   return .iPadFifthGen
+        case "iPad Air":                return .iPadAir
+        case "iPad Air 2":              return .iPadAir2
+        case "iPad Pro (9.7-inch)":     return .iPadPro9_7Inch
+        case "iPad Pro (10.5-inch)":    return .iPadPro10_5Inch
+        case "iPad Pro (12.9 inch)",
+             "iPad Pro (12.9 inch) (2nd generation)":
+                                        return .iPadPro12_9Inch
+        default:                        return .unknown
         }
     }
 }
