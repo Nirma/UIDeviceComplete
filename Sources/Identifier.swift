@@ -214,6 +214,10 @@ extension Identifier: CustomStringConvertible {
             return "iPad mini 3 (WiFi)"
         case (4, 4):
             return "iPad mini Retina (WiFi)"
+        case (5, 1):
+            return "iPad mini 4 (WiFi)"
+        case (5, 2):
+            return "iPad mini 4 (WiFi+LTE)"
         case (5, 3):
             return "iPad Air 2 (WiFi)"
         case (5, 4):
@@ -226,7 +230,19 @@ extension Identifier: CustomStringConvertible {
             return "iPad Pro (9.7 inch, Wi-Fi+LTE)"
         case (6, 7):
             return "iPad Pro (12.9 inch, Wi-Fi)"
-
+        case (6, 11):
+            return "5th Gen iPad (WiFi)"
+        case (6, 12):
+            return "5th Gen iPad (Cellular)"
+        case (7, 1):
+            return "2nd Gen iPad Pro (12.9 inch, Wi-Fi)"
+        case (7, 2):
+            return "2nd Gen iPad Pro (12.9 inch, Wi-Fi+LTE)"
+        case (7, 3):
+            return "iPad Pro (10.5 inch, Wi-Fi)"
+        case (7, 4):
+            return "iPad Pro (10.5 inch, Wi-Fi+LTE)"
+            
         default:
             return "unknown"
         }
