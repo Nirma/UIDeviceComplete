@@ -237,7 +237,7 @@ class IdentifierTests: XCTestCase {
     // MARK: - iPad
     
     func testDisplayStringiPad7v4() {
-        XCTAssert(Identifier("iPad7,4").description == "iPad Pro (10,5 inch, Wi-Fi+LTE)", "iPad7,4 is failing to produce a common device model string")
+        XCTAssert(Identifier("iPad7,4").description == "iPad Pro (10.5 inch, Wi-Fi+LTE)", "iPad7,4 is failing to produce a common device model string")
     }
     
     func testDisplayStringiPad7v3() {
@@ -285,7 +285,7 @@ class IdentifierTests: XCTestCase {
     }
 
     func testDisplayStringiPad4v9() {
-        XCTAssert(Identifier("iPad4,9").description == "iPad Mini 3 (China)", "iPad4,9 is failing to produce a common device model string")
+        XCTAssert(Identifier("iPad4,9").description == "iPad mini 3 (China)", "iPad4,9 is failing to produce a common device model string")
     }
 
     func testDisplayStringiPad4v8() {
