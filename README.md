@@ -39,7 +39,7 @@ UIdevice.current.dc.commonDeviceName // iPad Pro (12.9 inch, Wi-Fi+LTE)
 ### Detecting iOS Device models
 
 ```Swift
-let device = UIdevice.current.dc.deviceModel
+let device = UIDevice.current.dc.deviceModel
 
 switch device {
     case .iPhoneX:
@@ -61,7 +61,7 @@ Screen size can be be queried with the following computed property returning a s
 that represents the screen size in inches:
 
 ```swift
-let screenSize: Double = UIDevice.current.dc.screen.inches
+let screenSize: Double = UIDevice.current.dc.screenSize.sizeInches
 
 if screenSize <= 4.0 {
     print("Modest screen size; not so modest price tag")
@@ -78,7 +78,7 @@ If the type of device family is all you are after i.e iPhone or iPad and the spe
 is not important then `DeviceFamily` might be what you need.
 
 ```Swift
-let deviceFamily = UIdevice.current.dc.deviceFamily
+let deviceFamily = UIDevice.current.dc.deviceFamily
 
 switch deviceFamily {
     case .iPhone:
@@ -97,7 +97,7 @@ switch deviceFamily {
 #### Carthage
 
 If you use Carthage to manage your dependencies, simply add
-UIFontComplete to your `Cartfile`:
+UIDeviceComplete to your `Cartfile`:
 
 ```
 github "Nirma/UIDeviceComplete"
