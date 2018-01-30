@@ -283,6 +283,14 @@ class IdentifierTests: XCTestCase {
     func testDisplayStringiPad5v3() {
         XCTAssert(Identifier("iPad5,3").description == "iPad Air 2 (WiFi)", "iPad5,3 is failing to produce a common device model string")
     }
+    
+    func testDisplayStringiPad5v2() {
+        XCTAssert(Identifier("iPad5,2").description == "iPad mini 4 (WiFi+LTE)", "iPad5,2 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringiPad5v1() {
+        XCTAssert(Identifier("iPad5,1").description == "iPad mini 4 (WiFi)", "iPad5,1 is failing to produce a common device model string")
+    }
 
     func testDisplayStringiPad4v9() {
         XCTAssert(Identifier("iPad4,9").description == "iPad mini 3 (China)", "iPad4,9 is failing to produce a common device model string")
@@ -306,6 +314,10 @@ class IdentifierTests: XCTestCase {
 
     func testDisplayStringiPad4v4() {
         XCTAssert(Identifier("iPad4,4").description == "iPad mini Retina (WiFi)", "iPad4,4 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringiPad4v3() {
+        XCTAssert(Identifier("iPad4,3").description == "iPad Air (China)", "iPad4,3 is failing to produce a common device model string")
     }
 
     func testDisplayStringiPad4v2() {
