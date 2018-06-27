@@ -25,5 +25,35 @@
 import XCTest
 
 class UIDeviceExtensionsTests: XCTestCase {
-    // TODO: Write Tests
+    
+    let DeviceExtensions = UIDeviceComplete(UIDevice())
+    
+    func testDeviceExtensionsDeviceFamily() {
+        XCTAssertNotEqual(.unknown, DeviceExtensions.deviceFamily, "DeviceExtensions - .deviceFamily is failing")
+    }
+    
+    func testDeviceExtensionsDeviceModel() {
+        XCTAssertNotEqual(.unknown, DeviceExtensions.deviceModel, "DeviceExtensions - .deviceModel is failing")
+    }
+    
+    func testDeviceExtensionsCommonDeviceName() {
+        XCTAssertNotEqual("unknown", DeviceExtensions.commonDeviceName, "DeviceExtensions - .commonDeviceName is failing")
+    }
+    
+    func testDeviceExtensionsIsIphone() {
+        XCTAssertTrue(DeviceExtensions.isIphone, "DeviceExtensions - .isIphone is failing")
+    }
+    
+    func testDeviceExtensionsIsIpad() {
+        XCTAssertTrue(DeviceExtensions.isIpad, "DeviceExtensions - .isIpad is failing")
+    }
+    
+    func testDeviceExtensionsIsIpod() {
+        XCTAssertTrue(DeviceExtensions.isIpod, "DeviceExtensions - .isIpod is failing")
+    }
+    
+    func testDeviceExtensionsIsSimulator() {
+        XCTAssertTrue(DeviceExtensions.isSimulator, "DeviceExtensions - .isSimulator is failing")
+    }
+    
 }
