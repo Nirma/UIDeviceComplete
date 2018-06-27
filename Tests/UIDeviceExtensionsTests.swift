@@ -36,24 +36,24 @@ class UIDeviceExtensionsTests: XCTestCase {
         XCTAssertNotEqual(.unknown, DeviceExtensions.deviceModel, "DeviceExtensions - .deviceModel is failing")
     }
     
-    func testDeviceExtensionsCommonDeviceName() {
-        XCTAssertNotEqual("unknown", DeviceExtensions.commonDeviceName, "DeviceExtensions - .commonDeviceName is failing")
-    }
-    
     func testDeviceExtensionsIsIphone() {
-        XCTAssertTrue(DeviceExtensions.isIphone, "DeviceExtensions - .isIphone is failing")
+        let deviceFamily = DeviceFamily(rawValue: "iPhone")
+        XCTAssert(deviceFamily == .iPhone, "DeviceExtensions - .isIphone is failing")
     }
     
     func testDeviceExtensionsIsIpad() {
-        XCTAssertTrue(DeviceExtensions.isIpad, "DeviceExtensions - .isIpad is failing")
+        let deviceFamily = DeviceFamily(rawValue: "iPad")
+        XCTAssert(deviceFamily == .iPad, "DeviceExtensions - .isIpad is failing")
     }
     
     func testDeviceExtensionsIsIpod() {
-        XCTAssertTrue(DeviceExtensions.isIpod, "DeviceExtensions - .isIpod is failing")
+        let deviceFamily = DeviceFamily(rawValue: "iPod")
+        XCTAssert(deviceFamily == .iPod, "DeviceExtensions - .isIpod is failing")
     }
     
     func testDeviceExtensionsIsSimulator() {
-        XCTAssertTrue(DeviceExtensions.isSimulator, "DeviceExtensions - .isSimulator is failing")
+        let deviceFamily = DeviceFamily(rawValue: "x86_64")
+        XCTAssert(deviceFamily == .simulator, "DeviceExtensions - .isSimulator is failing")
     }
     
 }
