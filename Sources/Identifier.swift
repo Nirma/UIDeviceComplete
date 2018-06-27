@@ -245,6 +245,10 @@ extension Identifier: CustomStringConvertible {
             return "iPad Pro (10.5 inch, Wi-Fi)"
         case (7, 4):
             return "iPad Pro (10.5 inch, Wi-Fi+LTE)"
+        case (7 ,5):
+            return "6th Gen iPad (WiFi)"
+        case (7, 6):
+            return "6th Gen iPad (Cellular)"
             
         default:
             return "unknown"
