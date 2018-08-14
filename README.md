@@ -33,7 +33,7 @@ easily be seen, also lowering the possibility of naming conflicts.
 ### Getting common device name
 
 ```swift 
-UIdevice.current.dc.commonDeviceName // iPad Pro (12.9 inch, Wi-Fi+LTE)
+UIDevice.current.dc.commonDeviceName // iPad Pro (12.9 inch, Wi-Fi+LTE)
 ```
 
 ### Detecting iOS Device models
