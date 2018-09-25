@@ -48,6 +48,8 @@ extension Screen {
         case (667, 3.0), (736, _): return 5.5
         case (667, 1.0), (667, 2.0): return 4.7
         case (812, 3.0): return 5.8
+        case (896, 2.0): return 6.1
+        case (896, 3.0): return 6.5
         case (1024, _): return ipadSize1024()
         case (1112, _): return 10.5
         case (1366, _): return 12.9
