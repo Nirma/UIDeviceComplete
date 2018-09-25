@@ -141,6 +141,14 @@ extension Identifier: CustomStringConvertible {
             return "iPhone 8 Plus"
         case (10, 6):
             return "iPhone X"
+        case (11, 2):
+            return "iPhone XS"
+        case (11, 4):
+            return "iPhone XS Max"
+        case (11, 6):
+            return "iPhone XS Max (China)"
+        case (11, 8):
+            return "iPhone XR"
         
         
         default:
