@@ -30,6 +30,8 @@ public enum DeviceModel {
     case iPhone7, iPhone7Plus
     case iPhone8, iPhone8Plus
     case iPhoneX
+    case iPhoneXS, iPhoneXSMax
+    case iPhoneXR
 
     case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen
 
@@ -91,6 +93,9 @@ extension DeviceModel {
         case (10, 1), (10, 4):  return .iPhone8
         case (10, 2), (10, 5):  return .iPhone8Plus
         case (10, 3), (10, 6):  return .iPhoneX
+        case (11, 2):           return .iPhoneXS
+        case (11, 4), (11, 6):  return .iPhoneXSMax
+        case (11, 8):           return .iPhoneXR
         default:                return .unknown
         }
     }
@@ -170,6 +175,9 @@ extension DeviceModel {
         case "iPhone 8":                return .iPhone8
         case "iPhone 8 Plus":           return .iPhone8Plus
         case "iPhone X":                return .iPhoneX
+        case "iPhone XS":               return .iPhoneXS
+        case "iPhone XS Max":           return .iPhoneXSMax
+        case "iPhone XR":               return .iPhoneXR
         case "iPad (5th generation)":   return .iPadFifthGen
         case "iPad Air":                return .iPadAir
         case "iPad Air 2":              return .iPadAir2
