@@ -2,7 +2,7 @@
 UIDevice extensions that fill in the missing pieces.
 
 [![Build Status](https://travis-ci.org/Nirma/UIDeviceComplete.svg?branch=master)](https://travis-ci.org/Nirma/UIDeviceComplete)
-![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)
+![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)
 ![CodeCov](https://img.shields.io/codecov/c/github/Nirma/UIDeviceComplete.svg)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/UIDeviceComplete.svg)](#cocoapods)
 [![CocoaPods](https://img.shields.io/cocoapods/dt/UIDeviceComplete.svg)]()
@@ -13,7 +13,7 @@ UIDevice extensions that fill in the missing pieces.
 # Whats this library about?
 `UIDeviceComplete` is an iOS library intended to be a collection of extensions to `UIDevice` 
 that provide functionality that `UIDevice` currently lacks like determining which iOS device
-you have (i.e iPhone X, iPhone 8, iPhone SE, iPad Pro, iPhone7 etc) or determining the screen size of the device
+you have (i.e iPhone X, iPhone 8, iPhone SE, iPad Pro, iPhone 7 etc) or determining the screen size of the device
 in inches.
 
 # Features
