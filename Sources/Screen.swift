@@ -64,3 +64,19 @@ extension Screen {
         }
     }
 }
+
+// MARK: - Detecting Screen aspect ratio
+
+extension Screen {
+    
+    public var aspectRatio: String? {
+        switch (height, scale) {
+        case (480, _): return "3:2"
+        case (568, _), (667, 3.0), (736, _), (667, 1.0), (667, 2.0): return "16:9"
+        case (812, 3.0): return "19.5:9"
+        case (1024, _), (1112, _), (1366, _): return "4:3"
+        default: return nil
+        }
+    }
+    
+}
