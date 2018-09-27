@@ -171,6 +171,12 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel1 == .iPadFifthGen && deviceModel2 == .iPadFifthGen , "DeviceModel - .iPadFifthGen is failing")
     }
     
+    func testDeviceModelIPadSixthGen() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad7,5"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad7,6"))
+        XCTAssert(deviceModel1 == .iPadSixthGen && deviceModel2 == .iPadSixthGen , "DeviceModel - .iPadSixthGen is failing")
+    }
+    
     func testDeviceModelIPadAir() {
         let deviceModel1 = DeviceModel(identifier: Identifier("iPad4,1"))
         let deviceModel2 = DeviceModel(identifier: Identifier("iPad4,2"))
@@ -205,6 +211,12 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel1 == .iPadMini3 && deviceModel2 == .iPadMini3 && deviceModel3 == .iPadMini3 , "DeviceModel - .iPadMini3 is failing")
     }
     
+    func testDeviceModelIPadMini4() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad5,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad5,2"))
+        XCTAssert(deviceModel1 == .iPadMini4 && deviceModel2 == .iPadMini4 , "DeviceModel - .iPadMini4 is failing")
+    }
+    
     func testDeviceModelIPadPro9_7Inch() {
         let deviceModel1 = DeviceModel(identifier: Identifier("iPad6,3"))
         let deviceModel2 = DeviceModel(identifier: Identifier("iPad6,4"))
@@ -221,6 +233,12 @@ class DeviceModelTests: XCTestCase {
         let deviceModel1 = DeviceModel(identifier: Identifier("iPad6,7"))
         let deviceModel2 = DeviceModel(identifier: Identifier("iPad6,8"))
         XCTAssert(deviceModel1 == .iPadPro12_9Inch && deviceModel2 == .iPadPro12_9Inch , "DeviceModel - .iPadPro12_9Inch is failing")
+    }
+    
+    func testDeviceModelIPadPro12_9Inch_SecondGen() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad7,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad7,2"))
+        XCTAssert(deviceModel1 == .iPadPro12_9Inch_SecondGen && deviceModel2 == .iPadPro12_9Inch_SecondGen , "DeviceModel - .iPadPro12_9Inch_SecondGen is failing")
     }
     
     // MARK: - iPod Device Model tests
