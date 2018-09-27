@@ -223,4 +223,44 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel1 == .iPadPro12_9Inch && deviceModel2 == .iPadPro12_9Inch , "DeviceModel - .iPadPro12_9Inch is failing")
     }
     
+    // MARK: - iPod Device Model tests
+    
+    func testDeviceModelIPodTouchFirstGen() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPod1,1"))
+        XCTAssert(deviceModel == .iPodTouchFirstGen , "DeviceModel - .iPodFirstGen is failing")
+    }
+    
+    func testDeviceModelIPodTouchSecondGen() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPod2,1"))
+        XCTAssert(deviceModel == .iPodTouchSecondGen , "DeviceModel - .iPodSecondGen is failing")
+    }
+    
+    func testDeviceModelIPodTouchThirdGen() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPod3,1"))
+        XCTAssert(deviceModel == .iPodTouchThirdGen , "DeviceModel - .iPodThirdGen is failing")
+    }
+    
+    func testDeviceModelIPodTouchFourthGen() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPod4,1"))
+        XCTAssert(deviceModel == .iPodTouchFourthGen , "DeviceModel - .iPodFourthGen is failing")
+    }
+    
+    func testDeviceModelIPodTouchFifthGen() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPod5,1"))
+        XCTAssert(deviceModel == .iPodTouchFifthGen , "DeviceModel - .iPodFifthGen is failing")
+    }
+    
+    func testDeviceModelIPodTouchSixthGen() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPod7,1"))
+        XCTAssert(deviceModel == .iPodTouchSixthGen , "DeviceModel - .iPodSixthGen is failing")
+    }
+    
+    // MARK: Simulator Test
+    
+    func testDeviceModelSimulator() {
+        let deviceModel = DeviceModel(identifier: Identifier("unknown"))
+        
+        XCTAssert(deviceModel == .unknown , "DeviceModel - .unknown is failing")
+    }
+    
 }
