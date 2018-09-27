@@ -3,8 +3,25 @@
 //  UIDeviceCompleteTests
 //
 //  Created by Vincent on 26/9/18.
-//  Copyright © 2018 Nicholas Maccharoli. All rights reserved.
+//  Copyright © 2018 Nicholas Maccharoli
 //
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 
 @testable import UIDeviceComplete
 import XCTest
@@ -165,6 +182,45 @@ class DeviceModelTests: XCTestCase {
         let deviceModel1 = DeviceModel(identifier: Identifier("iPad5,3"))
         let deviceModel2 = DeviceModel(identifier: Identifier("iPad5,4"))
         XCTAssert(deviceModel1 == .iPadAir2 && deviceModel2 == .iPadAir2 , "DeviceModel - .iPadAir2 is failing")
+    }
+    
+    func testDeviceModelIPadMini() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad2,5"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad2,6"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("iPad2,7"))
+        XCTAssert(deviceModel1 == .iPadMini && deviceModel2 == .iPadMini && deviceModel3 == .iPadMini , "DeviceModel - .iPadMini is failing")
+    }
+    
+    func testDeviceModelIPadMini2() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad4,4"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad4,5"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("iPad4,6"))
+        XCTAssert(deviceModel1 == .iPadMini2 && deviceModel2 == .iPadMini2 && deviceModel3 == .iPadMini2 , "DeviceModel - .iPadMini2 is failing")
+    }
+    
+    func testDeviceModelIPadMini3() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad4,7"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad4,8"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("iPad4,9"))
+        XCTAssert(deviceModel1 == .iPadMini3 && deviceModel2 == .iPadMini3 && deviceModel3 == .iPadMini3 , "DeviceModel - .iPadMini3 is failing")
+    }
+    
+    func testDeviceModelIPadPro9_7Inch() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad6,3"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad6,4"))
+        XCTAssert(deviceModel1 == .iPadPro9_7Inch && deviceModel2 == .iPadPro9_7Inch , "DeviceModel - .iPadPro9_7Inch is failing")
+    }
+    
+    func testDeviceModelIPadPro10_5Inch() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad7,3"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad7,4"))
+        XCTAssert(deviceModel1 == .iPadPro10_5Inch && deviceModel2 == .iPadPro10_5Inch , "DeviceModel - .iPadPro10_5Inch is failing")
+    }
+    
+    func testDeviceModelIPadPro12_9Inch() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad6,7"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad6,8"))
+        XCTAssert(deviceModel1 == .iPadPro12_9Inch && deviceModel2 == .iPadPro12_9Inch , "DeviceModel - .iPadPro12_9Inch is failing")
     }
     
 }
