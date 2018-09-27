@@ -20,6 +20,7 @@
 		AA1C21AB1F385C2A0095BFBD /* UIDeviceExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C21A71F385C2A0095BFBD /* UIDeviceExtensionsTests.swift */; };
 		AAB1EF351F13866F003BBCF2 /* UIDeviceComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB1EF2B1F13866F003BBCF2 /* UIDeviceComplete.framework */; };
 		AAB1EF3C1F13866F003BBCF2 /* UIDeviceComplete.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB1EF2E1F13866F003BBCF2 /* UIDeviceComplete.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFA9121C215B9881000CD8A8 /* DeviceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA9121B215B9881000CD8A8 /* DeviceModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AAB1EF2F1F13866F003BBCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAB1EF341F13866F003BBCF2 /* UIDeviceCompleteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIDeviceCompleteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAB1EF3B1F13866F003BBCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA9121B215B9881000CD8A8 /* DeviceModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceModelTests.swift; path = Tests/DeviceModelTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		AAB1EF381F13866F003BBCF2 /* UIDeviceCompleteTests */ = {
 			isa = PBXGroup;
 			children = (
+				BFA9121B215B9881000CD8A8 /* DeviceModelTests.swift */,
 				AA1C21A41F385C2A0095BFBD /* DeviceFamilyTests.swift */,
 				AA1C21A51F385C2A0095BFBD /* IdentifierTests.swift */,
 				AA1C21A61F385C2A0095BFBD /* SystemTests.swift */,
@@ -253,6 +256,7 @@
 				AA1C21A91F385C2A0095BFBD /* IdentifierTests.swift in Sources */,
 				AA1C21AB1F385C2A0095BFBD /* UIDeviceExtensionsTests.swift in Sources */,
 				AA1C21AA1F385C2A0095BFBD /* SystemTests.swift in Sources */,
+				BFA9121C215B9881000CD8A8 /* DeviceModelTests.swift in Sources */,
 				AA1C21A81F385C2A0095BFBD /* DeviceFamilyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
