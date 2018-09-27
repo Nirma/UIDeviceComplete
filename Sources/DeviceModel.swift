@@ -33,13 +33,13 @@ public enum DeviceModel {
     case iPhoneXS, iPhoneXSMax
     case iPhoneXR
 
-    case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen
+    case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen, iPadSixthGen
 
     case iPadAir, iPadAir2
 
     case iPadMini, iPadMini2, iPadMini3, iPadMini4
 
-    case iPadPro9_7Inch, iPadPro10_5Inch, iPadPro12_9Inch
+    case iPadPro9_7Inch, iPadPro10_5Inch, iPadPro12_9Inch, iPadPro12_9Inch_SecondGen
 
     case iPodTouchFirstGen, iPodTouchSecondGen, iPodTouchThirdGen,
          iPodTouchFourthGen, iPodTouchFifthGen, iPodTouchSixthGen
@@ -117,14 +117,17 @@ extension DeviceModel {
         case (3, 1), (3, 2), (3, 3):          return .iPadThirdGen
         case (3, 4), (3, 5), (3, 6):          return .iPadFourthGen
         case (6, 11), (6, 12):                return .iPadFifthGen
+        case (7, 5), (7, 6):                  return .iPadSixthGen
         case (4, 1), (4, 2), (4, 3):          return .iPadAir
         case (5, 3), (5, 4):                  return .iPadAir2
         case (2, 5), (2, 6), (2, 7):          return .iPadMini
         case (4, 4), (4, 5), (4, 6):          return .iPadMini2
         case (4, 7), (4, 8), (4, 9):          return .iPadMini3
+        case (5, 1), (5, 2):                  return .iPadMini4
         case (6, 3), (6, 4):                  return .iPadPro9_7Inch
         case (7, 3), (7, 4):                  return .iPadPro10_5Inch
-        case (6, 7), (6, 8), (7, 1), (7, 2):  return .iPadPro12_9Inch
+        case (6, 7), (6, 8):                  return .iPadPro12_9Inch
+        case (7, 1), (7, 2):                  return .iPadPro12_9Inch_SecondGen
         default:                              return .unknown
         }
     }
@@ -179,13 +182,15 @@ extension DeviceModel {
         case "iPhone XS Max":           return .iPhoneXSMax
         case "iPhone XR":               return .iPhoneXR
         case "iPad (5th generation)":   return .iPadFifthGen
+        case "iPad (6th generation)":   return .iPadSixthGen
         case "iPad Air":                return .iPadAir
         case "iPad Air 2":              return .iPadAir2
         case "iPad Pro (9.7-inch)":     return .iPadPro9_7Inch
         case "iPad Pro (10.5-inch)":    return .iPadPro10_5Inch
-        case "iPad Pro (12.9 inch)",
-             "iPad Pro (12.9 inch) (2nd generation)":
+        case "iPad Pro (12.9 inch)":
                                         return .iPadPro12_9Inch
+        case "iPad Pro (12.9 inch) (2nd generation)":
+            return .iPadPro12_9Inch_SecondGen
         default:                        return .unknown
         }
     }
