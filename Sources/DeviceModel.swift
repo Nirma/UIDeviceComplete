@@ -39,7 +39,7 @@ public enum DeviceModel {
 
     case iPadMini, iPadMini2, iPadMini3, iPadMini4
 
-    case iPadPro9_7Inch, iPadPro10_5Inch, iPadPro12_9Inch, iPadPro12_9Inch_SecondGen
+    case iPadPro9_7Inch, iPadPro10_5Inch, iPadPro11Inch, iPadPro12_9Inch, iPadPro12_9Inch_SecondGen, iPadPro12_9Inch_ThirdGen
 
     case iPodTouchFirstGen, iPodTouchSecondGen, iPodTouchThirdGen,
          iPodTouchFourthGen, iPodTouchFifthGen, iPodTouchSixthGen
@@ -126,8 +126,10 @@ extension DeviceModel {
         case (5, 1), (5, 2):                  return .iPadMini4
         case (6, 3), (6, 4):                  return .iPadPro9_7Inch
         case (7, 3), (7, 4):                  return .iPadPro10_5Inch
+        case (8, 1), (8, 2), (8, 3), (8, 4):  return .iPadPro11Inch
         case (6, 7), (6, 8):                  return .iPadPro12_9Inch
         case (7, 1), (7, 2):                  return .iPadPro12_9Inch_SecondGen
+        case (8, 5), (8, 6), (8, 7), (8, 8):  return .iPadPro12_9Inch_ThirdGen
         default:                              return .unknown
         }
     }

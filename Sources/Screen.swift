@@ -52,6 +52,7 @@ extension Screen {
         case (896, 3.0): return 6.5
         case (1024, _): return ipadSize1024()
         case (1112, _): return 10.5
+        case (1194, _): return 11.0
         case (1366, _): return 12.9
         default: return nil
         }
@@ -77,6 +78,7 @@ extension Screen {
         case (568, _), (667, 3.0), (736, _), (667, 1.0), (667, 2.0): return "16:9"
         case (812, 3.0), (896, 2.0), (896, 3.0): return "19.5:9"
         case (1024, _), (1112, _), (1366, _): return "4:3"
+        // 3rd Gen iPad Pro aspect ratios still unknown
         default: return nil
         }
     }
