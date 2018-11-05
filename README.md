@@ -3,7 +3,7 @@ UIDevice extensions that fill in the missing pieces.
 
 [![Build Status](https://travis-ci.org/Nirma/UIDeviceComplete.svg?branch=master)](https://travis-ci.org/Nirma/UIDeviceComplete)
 ![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)
-![CodeCov](https://img.shields.io/codecov/c/github/Nirma/UIDeviceComplete.svg)
+[![CodeCov](https://img.shields.io/codecov/c/github/Nirma/UIDeviceComplete.svg)](https://codecov.io/gh/Nirma/UIDeviceComplete)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/UIDeviceComplete.svg)](#cocoapods)
 [![CocoaPods](https://img.shields.io/cocoapods/dt/UIDeviceComplete.svg)]()
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -12,7 +12,7 @@ UIDevice extensions that fill in the missing pieces.
 
 # Whats this library about?
 `UIDeviceComplete` is an iOS library intended to be a collection of extensions to `UIDevice` 
-that provide functionality that `UIDevice` currently lacks like determining which iOS device
+that provides functionality that `UIDevice` currently lacks like determining which iOS device
 you have (i.e iPhone X, iPhone 8, iPhone SE, iPad Pro, iPhone 7 etc) or determining the screen size of the device
 in inches.
 
@@ -25,7 +25,7 @@ in inches.
 Feel free to open an Issue requesting the feature you want or send over a pull request!
 
 # Use
-All of the extensions are called off of the `dc` variable ***stands for ([UI]DeviceComplete)*** object that this 
+All of the extensions are called off of the `dc` variable which ***stands for ([UI]DeviceComplete)*** object that this 
 library extends onto `UIDevice` that way native methods of `UIDevice` and methods of this library can
 easily be seen, also lowering the possibility of naming conflicts.
 
@@ -119,8 +119,8 @@ pod 'UIDeviceComplete'
 ## Contributing to this project
 **Contributions are highly welcome**
 
-If there is something you wish to fix about the project,
-propose to add to the project or any other kind of enhancement please feel free to send over a pull request 
+If there is something you wish to fix about the project, or wish to add any other kind of enhancements,
+propose to add to the project. Please feel free to send over a pull request 
 or open an issue for this project.
 
 ## License
