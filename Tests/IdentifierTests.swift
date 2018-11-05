@@ -253,11 +253,11 @@ class IdentifierTests: XCTestCase {
     // MARK: - iPad
     
     func testDisplayStringiPad7v6() {
-        XCTAssert(Identifier("iPad7,6").description == "6th Gen iPad (Cellular)", "iPad6,12 is failing to produce a common device model string")
+        XCTAssert(Identifier("iPad7,6").description == "6th Gen iPad (Cellular)", "iPad7,6 is failing to produce a common device model string")
     }
     
     func testDisplayStringiPad7v5() {
-        XCTAssert(Identifier("iPad7,5").description == "6th Gen iPad (WiFi)", "iPad6,11 is failing to produce a common device model string")
+        XCTAssert(Identifier("iPad7,5").description == "6th Gen iPad (WiFi)", "iPad7,5 is failing to produce a common device model string")
     }
     
     func testDisplayStringiPad7v4() {
