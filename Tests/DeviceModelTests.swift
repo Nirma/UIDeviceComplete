@@ -228,6 +228,13 @@ class DeviceModelTests: XCTestCase {
         let deviceModel2 = DeviceModel(identifier: Identifier("iPad7,4"))
         XCTAssert(deviceModel1 == .iPadPro10_5Inch && deviceModel2 == .iPadPro10_5Inch , "DeviceModel - .iPadPro10_5Inch is failing")
     }
+    func testDeviceModelIPadPro11Inch() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad8,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad8,2"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("iPad8,3"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("iPad8,4"))
+        XCTAssert(deviceModel1 == .iPadPro11Inch && deviceModel2 == .iPadPro11Inch && deviceModel3 == .iPadPro11Inch && deviceModel4 == .iPadPro11Inch, "DeviceModel - .iPadPro11Inch is failing")
+    }
     
     func testDeviceModelIPadPro12_9Inch() {
         let deviceModel1 = DeviceModel(identifier: Identifier("iPad6,7"))
@@ -239,6 +246,13 @@ class DeviceModelTests: XCTestCase {
         let deviceModel1 = DeviceModel(identifier: Identifier("iPad7,1"))
         let deviceModel2 = DeviceModel(identifier: Identifier("iPad7,2"))
         XCTAssert(deviceModel1 == .iPadPro12_9Inch_SecondGen && deviceModel2 == .iPadPro12_9Inch_SecondGen , "DeviceModel - .iPadPro12_9Inch_SecondGen is failing")
+    }
+    func testDeviceModelIPadPro12_9Inch_ThirdGen() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad8,5"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad8,6"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("iPad8,7"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("iPad8,8"))
+        XCTAssert(deviceModel1 == .iPadPro12_9Inch_ThirdGen && deviceModel2 == .iPadPro12_9Inch_ThirdGen && deviceModel3 == .iPadPro12_9Inch_ThirdGen && deviceModel4 == .iPadPro12_9Inch_ThirdGen, "DeviceModel - .iPadPro12_9Inch_ThirdGen is failing")
     }
     
     // MARK: - iPod Device Model tests
