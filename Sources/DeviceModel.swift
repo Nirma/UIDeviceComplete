@@ -189,10 +189,10 @@ extension DeviceModel {
         case "iPad Air 2":              return .iPadAir2
         case "iPad Pro (9.7-inch)":     return .iPadPro9_7Inch
         case "iPad Pro (10.5-inch)":    return .iPadPro10_5Inch
-        case "iPad Pro (12.9 inch)":
-                                        return .iPadPro12_9Inch
-        case "iPad Pro (12.9 inch) (2nd generation)":
-            return .iPadPro12_9Inch_SecondGen
+        case "iPad Pro (11-inch)":      return .iPadPro11Inch
+        case "iPad Pro (12.9-inch)":    return .iPadPro12_9Inch
+        case "iPad Pro (12.9-inch) (2nd generation)":   return .iPadPro12_9Inch_SecondGen
+        case "iPad Pro (12.9-inch) (3rd generation)":   return .iPadPro12_9Inch_ThirdGen
         default:                        return .unknown
         }
     }
