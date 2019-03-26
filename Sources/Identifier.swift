@@ -273,6 +273,14 @@ extension Identifier: CustomStringConvertible {
             return "3rd Gen iPad Pro (12.9 inch, Wi-Fi+LTE)"
         case (8, 8):
             return "3rd Gen iPad Pro (12.9 inch, Wi-Fi+LTE, 1TB)"
+        case (11, 1):
+            return "5th Gen iPad Mini (Wi-Fi)"
+        case (11, 2):
+            return "5th Gen iPad Mini (Wi-Fi+LTE)"
+        case (11, 3):
+            return "3rd Gen iPad Air (Wi-Fi)"
+        case (11, 4):
+            return "3rd Gen iPad Air (Wi-Fi+LTE)"
         default:
             return "unknown"
         }
