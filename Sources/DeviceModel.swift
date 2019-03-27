@@ -35,9 +35,9 @@ public enum DeviceModel {
 
     case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen, iPadSixthGen
 
-    case iPadAir, iPadAir2
+    case iPadAir, iPadAir2, iPadAir3
 
-    case iPadMini, iPadMini2, iPadMini3, iPadMini4
+    case iPadMini, iPadMini2, iPadMini3, iPadMini4, iPadMini5
 
     case iPadPro9_7Inch, iPadPro10_5Inch, iPadPro11Inch, iPadPro12_9Inch, iPadPro12_9Inch_SecondGen, iPadPro12_9Inch_ThirdGen
 
@@ -120,10 +120,12 @@ extension DeviceModel {
         case (7, 5), (7, 6):                  return .iPadSixthGen
         case (4, 1), (4, 2), (4, 3):          return .iPadAir
         case (5, 3), (5, 4):                  return .iPadAir2
+        case (11, 3), (11, 4):                return .iPadAir3
         case (2, 5), (2, 6), (2, 7):          return .iPadMini
         case (4, 4), (4, 5), (4, 6):          return .iPadMini2
         case (4, 7), (4, 8), (4, 9):          return .iPadMini3
         case (5, 1), (5, 2):                  return .iPadMini4
+        case (11, 1), (11, 2):                return .iPadMini5
         case (6, 3), (6, 4):                  return .iPadPro9_7Inch
         case (7, 3), (7, 4):                  return .iPadPro10_5Inch
         case (8, 1), (8, 2), (8, 3), (8, 4):  return .iPadPro11Inch
@@ -187,6 +189,7 @@ extension DeviceModel {
         case "iPad (6th generation)":   return .iPadSixthGen
         case "iPad Air":                return .iPadAir
         case "iPad Air 2":              return .iPadAir2
+        case "iPad Air 3":              return .iPadAir3
         case "iPad Pro (9.7-inch)":     return .iPadPro9_7Inch
         case "iPad Pro (10.5-inch)":    return .iPadPro10_5Inch
         case "iPad Pro (11-inch)":      return .iPadPro11Inch
