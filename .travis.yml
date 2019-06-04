@@ -1,9 +1,9 @@
 language: objective-c
-osx_image: xcode9
+osx_image: xcode10.2
 xcode_project: UIDeviceComplete.xcodeproj
 xcode_scheme: UIDeviceComplete
 
 script:
-  - xcodebuild test -scheme UIDeviceComplete -sdk iphonesimulator -destination 'OS=11.0,name=iPhone 6 Plus'
+  - xcodebuild test -scheme UIDeviceComplete -sdk iphonesimulator -destination 'OS=12.0,name=iPhone 8'
 after_success:
   - bash <(curl -s https://codecov.io/bash)
