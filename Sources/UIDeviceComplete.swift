@@ -37,7 +37,7 @@ public protocol UIDeviceCompleteCompatible {
 }
 
 public extension UIDeviceCompleteCompatible {
-    public var dc: UIDeviceComplete<Self> {
+    var dc: UIDeviceComplete<Self> {
         return UIDeviceComplete(self)
     }
 }
