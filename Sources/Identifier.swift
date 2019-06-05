@@ -170,6 +170,8 @@ extension Identifier: CustomStringConvertible {
             return "5th Gen iPod"
         case (7, 1):
             return "6th Gen iPod"
+        case (9, 1):
+            return "7th Gen iPod"
         default:
             return "unknown"
         }
