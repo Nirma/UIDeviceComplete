@@ -50,7 +50,7 @@
 		AAB1EF2F1F13866F003BBCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAB1EF341F13866F003BBCF2 /* UIDeviceCompleteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIDeviceCompleteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAB1EF3B1F13866F003BBCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFA9121B215B9881000CD8A8 /* DeviceModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceModelTests.swift; path = Tests/DeviceModelTests.swift; sourceTree = SOURCE_ROOT; };
+		BFA9121B215B9881000CD8A8 /* DeviceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceModelTests.swift; path = Tests/DeviceModelTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
