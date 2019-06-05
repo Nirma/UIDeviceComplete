@@ -224,6 +224,10 @@ class IdentifierTests: XCTestCase {
 
 
     // MARK: - iPod
+    
+    func testDisplayStringiPod9v1() {
+        XCTAssert(Identifier("iPod9,1").description == "7th Gen iPod", "iPod9,1 is failing to produce a common device model string")
+    }
 
     func testDisplayStringiPod7v1() {
         XCTAssert(Identifier("iPod7,1").description == "6th Gen iPod", "iPod7,1 is failing to produce a common device model string")

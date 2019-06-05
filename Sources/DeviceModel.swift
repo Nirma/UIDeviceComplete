@@ -42,7 +42,7 @@ public enum DeviceModel {
     case iPadPro9_7Inch, iPadPro10_5Inch, iPadPro11Inch, iPadPro12_9Inch, iPadPro12_9Inch_SecondGen, iPadPro12_9Inch_ThirdGen
 
     case iPodTouchFirstGen, iPodTouchSecondGen, iPodTouchThirdGen,
-         iPodTouchFourthGen, iPodTouchFifthGen, iPodTouchSixthGen
+         iPodTouchFourthGen, iPodTouchFifthGen, iPodTouchSixthGen, iPodTouchSeventhGen
 
     case unknown
 }
@@ -154,6 +154,7 @@ extension DeviceModel {
         case (4, 1):          return .iPodTouchFourthGen
         case (5, 1):          return .iPodTouchFifthGen
         case (7, 1):          return .iPodTouchSixthGen
+        case (9, 1):          return .iPodTouchSeventhGen
         default:              return .unknown
         }
     }

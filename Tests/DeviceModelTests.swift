@@ -299,6 +299,10 @@ class DeviceModelTests: XCTestCase {
         let deviceModel = DeviceModel(identifier: Identifier("iPod7,1"))
         XCTAssert(deviceModel == .iPodTouchSixthGen , "DeviceModel - .iPodSixthGen is failing")
     }
+    func testDeviceModelIPodTouchSeventhGen() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPod9,1"))
+        XCTAssert(deviceModel == .iPodTouchSeventhGen , "DeviceModel - .iPodSeventhGen is failing")
+    }
     
     // MARK: Simulator Test
     
