@@ -311,5 +311,14 @@ class DeviceModelTests: XCTestCase {
         
         XCTAssert(deviceModel == .unknown , "DeviceModel - .unknown is failing")
     }
-    
+
+    // MARK: Notch test
+    func testHasNotch() {
+      let notchModels: [DeviceModel] = [.iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR]
+
+      let noNotchModels: [DeviceModel] = DeviceModel.allCases.filter( { !notchModels.contains($0) })
+
+      notchModels.forEach { XCTAssertTrue($0.hasNotch) }
+      noNotchModels.forEach { XCTAssertFalse($0.hasNotch) }
+    }
 }

@@ -65,10 +65,6 @@ public extension UIDeviceComplete where Base == UIDevice {
     var isSimulator: Bool {
         return deviceFamily == .simulator
     }
-
-    var hasNotch: Bool {
-        return deviceModel.hasNotch
-    }
 }
 
 
