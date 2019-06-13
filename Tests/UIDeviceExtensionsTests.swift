@@ -55,5 +55,14 @@ class UIDeviceExtensionsTests: XCTestCase {
         let deviceFamily = DeviceFamily(rawValue: "x86_64")
         XCTAssert(deviceFamily == .simulator, "DeviceExtensions - .isSimulator is failing")
     }
-    
+
+
+    func testHasNotch() {
+      let notchModels: [DeviceModel] = [.iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR]
+     
+      let noNotchModels: [DeviceModel] = DeviceModel.allCases.filter( { !notchModels.contains($0) })
+
+      notchModels.forEach { XCTAssertTrue($0.hasNotch) }
+      noNotchModels.forEach { XCTAssertFalse($0.hasNotch) }
+    }
 }

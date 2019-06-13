@@ -67,13 +67,7 @@ public extension UIDeviceComplete where Base == UIDevice {
     }
 
     var hasNotch: Bool {
-      switch deviceModel {
-        
-      case .iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR:
-        return true
-      default:
-        return false
-      }
+        return deviceModel.hasNotch
     }
 }
 
