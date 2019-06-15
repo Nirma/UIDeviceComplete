@@ -55,5 +55,4 @@ class UIDeviceExtensionsTests: XCTestCase {
         let deviceFamily = DeviceFamily(rawValue: "x86_64")
         XCTAssert(deviceFamily == .simulator, "DeviceExtensions - .isSimulator is failing")
     }
-    
 }

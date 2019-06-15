@@ -21,7 +21,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-public enum DeviceModel {
+public enum DeviceModel: CaseIterable {
 
     case iPhone4, iPhone4S
     case iPhone5, iPhone5C, iPhone5S
@@ -198,6 +198,20 @@ extension DeviceModel {
         case "iPad Pro (12.9-inch) (2nd generation)":   return .iPadPro12_9Inch_SecondGen
         case "iPad Pro (12.9-inch) (3rd generation)":   return .iPadPro12_9Inch_ThirdGen
         default:                        return .unknown
+        }
+    }
+}
+
+// MARK: Detecting the Notch
+
+extension DeviceModel {
+    public var hasNotch: Bool {
+        switch self {
+
+        case .iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR:
+            return true
+        default:
+          return false
         }
     }
 }
