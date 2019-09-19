@@ -25,21 +25,26 @@ public enum DeviceModel: CaseIterable {
 
     case iPhone4, iPhone4S
     case iPhone5, iPhone5C, iPhone5S
-    case iPhone6, iPhone6Plus, iPhone6S, iPhone6SPlus
+    case iPhone6, iPhone6Plus
+    case iPhone6S, iPhone6SPlus
     case iPhoneSE
     case iPhone7, iPhone7Plus
     case iPhone8, iPhone8Plus
     case iPhoneX
     case iPhoneXS, iPhoneXSMax
     case iPhoneXR
+    case iPhone11
+    case iPhone11Pro, iPhone11ProMax
 
-    case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen, iPadSixthGen
+    case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen, iPadSixthGen, iPadSevenGen
 
     case iPadAir, iPadAir2, iPadAir3
 
     case iPadMini, iPadMini2, iPadMini3, iPadMini4, iPadMini5
 
-    case iPadPro9_7Inch, iPadPro10_5Inch, iPadPro11Inch, iPadPro12_9Inch, iPadPro12_9Inch_SecondGen, iPadPro12_9Inch_ThirdGen
+    case iPadPro9_7Inch, iPadPro10_5Inch, iPadPro12_9Inch, iPadPro12_9Inch_SecondGen
+    
+    case iPadPro11Inch, iPadPro12_9Inch_ThirdGen
 
     case iPodTouchFirstGen, iPodTouchSecondGen, iPodTouchThirdGen,
          iPodTouchFourthGen, iPodTouchFifthGen, iPodTouchSixthGen, iPodTouchSeventhGen
@@ -96,6 +101,9 @@ extension DeviceModel {
         case (11, 2):           return .iPhoneXS
         case (11, 4), (11, 6):  return .iPhoneXSMax
         case (11, 8):           return .iPhoneXR
+        case (12, 1):           return .iPhone11
+        case (12, 3):           return .iPhone11Pro
+        case (12, 5):           return .iPhone11ProMax
         default:                return .unknown
         }
     }
@@ -132,6 +140,7 @@ extension DeviceModel {
         case (6, 7), (6, 8):                  return .iPadPro12_9Inch
         case (7, 1), (7, 2):                  return .iPadPro12_9Inch_SecondGen
         case (8, 5), (8, 6), (8, 7), (8, 8):  return .iPadPro12_9Inch_ThirdGen
+     // case (,):                             return .iPadSevenGen
         default:                              return .unknown
         }
     }
@@ -186,6 +195,9 @@ extension DeviceModel {
         case "iPhone XS":               return .iPhoneXS
         case "iPhone XS Max":           return .iPhoneXSMax
         case "iPhone XR":               return .iPhoneXR
+        case "iPhone 11":               return .iPhone11
+        case "iPhone 11 Pro":           return .iPhone11Pro
+        case "iPhone 11 Pro Max":       return .iPhone11ProMax
         case "iPad (5th generation)":   return .iPadFifthGen
         case "iPad (6th generation)":   return .iPadSixthGen
         case "iPad Air":                return .iPadAir
