@@ -222,6 +222,9 @@ extension DeviceModel {
 
         case .iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR:
             return true
+        case .iPhone11, .iPhone11Pro, .iPhone11ProMax:
+            return true
+            
         default:
           return false
         }

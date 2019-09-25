@@ -329,7 +329,7 @@ class DeviceModelTests: XCTestCase {
 
     // MARK: Notch test
     func testHasNotch() {
-      let notchModels: [DeviceModel] = [.iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR]
+      let notchModels: [DeviceModel] = [.iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR, .iPhone11, .iPhone11Pro, .iPhone11ProMax]
 
       let noNotchModels: [DeviceModel] = DeviceModel.allCases.filter( { !notchModels.contains($0) })
 
