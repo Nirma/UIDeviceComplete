@@ -265,6 +265,10 @@ extension Identifier: CustomStringConvertible {
             return "6th Gen iPad (WiFi)"
         case (7, 6):
             return "6th Gen iPad (Cellular)"
+        case (7 ,11):
+            return "7th Gen iPad (10.2 inch, WiFi)"
+        case (7, 12):
+            return "7th Gen iPad (10.2 inch, Cellular)"
         case (8, 1):
             return "iPad Pro (11 inch, Wi-Fi)"
         case (8, 2):
