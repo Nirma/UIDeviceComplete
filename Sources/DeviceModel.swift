@@ -140,7 +140,7 @@ extension DeviceModel {
         case (6, 7), (6, 8):                  return .iPadPro12_9Inch
         case (7, 1), (7, 2):                  return .iPadPro12_9Inch_SecondGen
         case (8, 5), (8, 6), (8, 7), (8, 8):  return .iPadPro12_9Inch_ThirdGen
-     // case (,):                             return .iPadSevenGen
+        case (7, 11), (7, 12):                return .iPadSevenGen
         default:                              return .unknown
         }
     }
@@ -222,6 +222,9 @@ extension DeviceModel {
 
         case .iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR:
             return true
+        case .iPhone11, .iPhone11Pro, .iPhone11ProMax:
+            return true
+            
         default:
           return false
         }

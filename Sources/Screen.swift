@@ -61,8 +61,9 @@ extension Screen {
     func ipadSize1024() -> Double {
         let deviceModel = UIDevice().dc.deviceModel
         switch deviceModel {
-        case .iPadMini, .iPadMini2, .iPadMini3, .iPadMini4: return 7.9
+        case .iPadMini, .iPadMini2, .iPadMini3, .iPadMini4, .iPadMini5: return 7.9
         case .iPadPro10_5Inch: return 10.5
+        case .iPadSevenGen: return 10.2
         default: return 9.7
         }
     }
