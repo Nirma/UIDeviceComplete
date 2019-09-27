@@ -192,9 +192,9 @@ extension DeviceModel {
         case "iPhone 8":                return .iPhone8
         case "iPhone 8 Plus":           return .iPhone8Plus
         case "iPhone X":                return .iPhoneX
-        case "iPhone XS":               return .iPhoneXS
-        case "iPhone XS Max":           return .iPhoneXSMax
-        case "iPhone XR":               return .iPhoneXR
+        case "iPhone Xs":               return .iPhoneXS
+        case "iPhone Xs Max":           return .iPhoneXSMax
+        case "iPhone Xʀ":               return .iPhoneXR
         case "iPhone 11":               return .iPhone11
         case "iPhone 11 Pro":           return .iPhone11Pro
         case "iPhone 11 Pro Max":       return .iPhone11ProMax
