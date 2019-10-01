@@ -24,5 +24,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "UIDeviceComplete"
+    name: "UIDeviceComplete",
+    targets: [.target(name: "UIDeviceComplete",
+                      path: "Sources")]
 )
