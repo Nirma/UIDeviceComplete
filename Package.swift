@@ -1,3 +1,5 @@
+// swift-tools-version:5.1
+//
 // Package.swift
 // Copyright (c) 2017 Nicholas Maccharoli
 //
