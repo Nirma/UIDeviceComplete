@@ -325,6 +325,13 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel == .iPodTouchSeventhGen , "DeviceModel - .iPodSeventhGen is failing")
     }
     
+    // MARK: Unknown Device Test
+    
+    func testInvalidDeviceModel() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone0,1"))
+        XCTAssert(deviceModel == .unknown, "DeviceModel - .unknown is failing")
+    }
+    
     // MARK: Notch test
     func testHasNotch() {
       let notchModels: [DeviceModel] = [.iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR, .iPhone11, .iPhone11Pro, .iPhone11ProMax]
