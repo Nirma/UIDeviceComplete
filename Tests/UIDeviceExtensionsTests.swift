@@ -51,8 +51,4 @@ class UIDeviceExtensionsTests: XCTestCase {
         XCTAssert(deviceFamily == .iPod, "DeviceExtensions - .isIpod is failing")
     }
     
-    func testDeviceExtensionsIsSimulator() {
-        let deviceFamily = DeviceFamily(rawValue: "x86_64")
-        XCTAssert(deviceFamily == .simulator, "DeviceExtensions - .isSimulator is failing")
-    }
 }

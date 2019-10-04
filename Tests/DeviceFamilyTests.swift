@@ -41,8 +41,4 @@ class DeviceFamilyTests: XCTestCase {
         XCTAssert(deviceFamily == .iPad, "DeviceFamily - .iPad is failing")
     }
 
-    func testDeviceFamilySimulator() {
-        let deviceFamily = DeviceFamily(rawValue: "x86_64")
-        XCTAssert(deviceFamily == .simulator, "DeviceFamily - .simulator is failing")
-    }
 }
