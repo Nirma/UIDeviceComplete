@@ -41,3 +41,15 @@ public enum DeviceFamily: String {
         }
     }
 }
+
+// MARK: Simulator Detection
+
+extension DeviceFamily {
+    public var isSimulator: Bool {
+        #if arch(i386) || arch(x86_64)
+        return true
+        #else
+        return false
+        #endif
+    }
+}
