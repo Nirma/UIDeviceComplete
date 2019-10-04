@@ -64,8 +64,8 @@ extension DeviceModel {
             self = DeviceModel.detectIpadModel(with: identifier)
         case .iPod:
             self = DeviceModel.detectIpodModel(with: identifier)
-        case .simulator:
-            self = DeviceModel.detectSimulatorModel()
+        /*case .simulator:
+            self = DeviceModel.detectSimulatorModel()*/
         default:
             self = .unknown
         }
@@ -171,7 +171,7 @@ extension DeviceModel {
 
 
 // MARK: Detecting Simulator Models
-
+/*
 extension DeviceModel {
     fileprivate static func detectSimulatorModel() -> DeviceModel {
         guard let simulatorID = ProcessInfo.processInfo.environment["SIMULATOR_MODEL_IDENTIFIER"] else {
@@ -180,7 +180,7 @@ extension DeviceModel {
         return DeviceModel(identifier: Identifier(simulatorID))
     }
 }
-
+*/
 // MARK: Detecting the Notch
 
 extension DeviceModel {

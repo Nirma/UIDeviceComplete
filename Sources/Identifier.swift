@@ -37,11 +37,11 @@ struct Identifier {
 
 extension Identifier {
     static func typeVersionComponents(with identifierString: String) -> (type: String, major: Int?, minor: Int?) {
-        
+        /*
         // Simulator Check
         if identifierString == "x86_64" || identifierString == "i386" {
             return (identifierString, nil, nil)
-        }
+        }*/
         
         let numericCharacters: [String] = (0...9).map { "\($0)" }
         let type = identifierString.prefix(while: { !numericCharacters.contains(String($0))})
@@ -74,8 +74,8 @@ extension Identifier: CustomStringConvertible {
             return iPadStringRepresentation(major: major, minor: minor)
         case .iPod:
             return iPodStringRepresentation(major: major, minor: minor)
-        case .simulator:
-            return "Simulator"
+        /*case .simulator:
+            return "Simulator"*/
         case .unknown:
             return "unknown"
         }

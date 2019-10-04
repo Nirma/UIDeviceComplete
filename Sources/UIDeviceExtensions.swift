@@ -62,9 +62,9 @@ public extension UIDeviceComplete where Base == UIDevice {
     }
 
     /// Simulator
-    var isSimulator: Bool {
+    /*var isSimulator: Bool {
         return deviceFamily == .simulator
-    }
+    }*/
 }
 
 

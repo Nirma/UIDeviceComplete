@@ -31,8 +31,17 @@ class System {
         // and the rest of the string being zeroed out.
         let encoding: UInt = String.Encoding.ascii.rawValue
         if let string = NSString(bytes: &systemInfo.machine, length: Int(_SYS_NAMELEN), encoding: encoding) {
-            return (string as String).components(separatedBy: "\0").first
+            let identifier = (string as String).components(separatedBy: "\0").first
+            
+            // Simulator Check
+            if identifier == "x86_64" || identifier == "i386" {
+                return ProcessInfo.processInfo.environment["SIMULATOR_MODEL_IDENTIFIER"]
+            }
+            
+            return identifier
         }
+        
+        
         return nil
     }
 }
