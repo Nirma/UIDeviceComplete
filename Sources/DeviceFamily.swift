@@ -26,7 +26,6 @@ public enum DeviceFamily: String {
     case iPhone
     case iPod
     case iPad
-    case simulator
     case unknown
 
     public init(rawValue: String) {
@@ -37,10 +36,20 @@ public enum DeviceFamily: String {
             self = .iPod
         case "iPad":
             self = .iPad
-        case "x86_64", "i386":
-            self = .simulator
         default:
             self = .unknown
         }
+    }
+}
+
+// MARK: Simulator Detection
+
+extension DeviceFamily {
+    public var isSimulator: Bool {
+        #if arch(i386) || arch(x86_64)
+        return true
+        #else
+        return false
+        #endif
     }
 }

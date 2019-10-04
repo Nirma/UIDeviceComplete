@@ -62,30 +62,6 @@ class IdentifierTests: XCTestCase {
             "Identifier initilization is failing"
         )
     }
-    
-    func testIdentifierInitSimulatorx86() {
-        let testString = "x86_64"
-        let identifier = Identifier(testString)
-        
-        XCTAssert(
-            (identifier.type == .simulator) &&
-                (identifier.version.major == nil) &&
-                (identifier.version.minor == nil),
-            "Identifier initilization is failing"
-        )
-    }
-    
-    func testIdentifierInitSimulatori386() {
-        let testString = "i386"
-        let identifier = Identifier(testString)
-        
-        XCTAssert(
-            (identifier.type == .simulator) &&
-                (identifier.version.major == nil) &&
-                (identifier.version.minor == nil),
-            "Identifier initilization is failing"
-        )
-    }
 
 
     // MARK: - iPhone String Description tests
