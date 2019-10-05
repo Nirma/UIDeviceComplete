@@ -1,3 +1,5 @@
+// swift-tools-version:5.0
+//
 // Package.swift
 // Copyright (c) 2017 Nicholas Maccharoli
 //
@@ -18,9 +20,18 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-
 import PackageDescription
 
 let package = Package(
-    name: "UIDeviceComplete"
+    name: "UIDeviceComplete",
+    platforms: [
+        .iOS(.v8)
+    ],
+    products: [
+        .library(name: "UIDeviceComplete", targets: ["UIDeviceComplete"])
+    ],
+    targets: [
+        .target(name: "UIDeviceComplete", path: "Sources"),
+    ],
+    swiftLanguageVersions: [.v5]
 )
