@@ -66,6 +66,10 @@ class IdentifierTests: XCTestCase {
 
     // MARK: - iPhone String Description tests
     
+    func testDisplayStringiPhone12v8() {
+        XCTAssert(Identifier("iPhone12,8").description == "iPhone SE (2nd Gen)", "iPhone12,8 is failing to produce a common device model string")
+    }
+    
     func testDisplayStringiPhone12v5() {
         XCTAssert(Identifier("iPhone12,5").description == "iPhone 11 Pro Max", "iPhone12,5 is failing to produce a common device model string")
     }
@@ -260,6 +264,23 @@ class IdentifierTests: XCTestCase {
         XCTAssert(Identifier("iPad11,1").description == "5th Gen iPad Mini (Wi-Fi)", "iPad11,1 is failing to produce a common device model string")
     }
     
+    func testDisplayStringiPad8v12() {
+        XCTAssert(Identifier("iPad8,12").description == "4th Gen iPad Pro (12.9 inch, Wi-Fi+LTE)", "iPad8,12 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringiPad8v11() {
+        XCTAssert(Identifier("iPad8,11").description == "4th Gen iPad Pro (12.9 inch, Wi-Fi)", "iPad8,11 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringiPad8v10() {
+        XCTAssert(Identifier("iPad8,10").description == "2nd Gen iPad Pro (11 inch, Wi-Fi+LTE)", "iPad8,10 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringiPad8v9() {
+        XCTAssert(Identifier("iPad8,9").description == "2nd Gen iPad Pro (11 inch, Wi-Fi)", "iPad8,9 is failing to produce a common device model string")
+    }
+    
+    
     func testDisplayStringiPad8v8() {
         XCTAssert(Identifier("iPad8,8").description == "3rd Gen iPad Pro (12.9 inch, Wi-Fi+LTE, 1TB)", "iPad8,8 is failing to produce a common device model string")
     }
@@ -272,7 +293,7 @@ class IdentifierTests: XCTestCase {
         XCTAssert(Identifier("iPad8,6").description == "3rd Gen iPad Pro (12.9 inch, Wi-Fi, 1TB)", "iPad8,6 is failing to produce a common device model string")
     }
     
-    func testDisplayStringiPad8v15() {
+    func testDisplayStringiPad8v5() {
         XCTAssert(Identifier("iPad8,5").description == "3rd Gen iPad Pro (12.9 inch, Wi-Fi)", "iPad8,5 is failing to produce a common device model string")
     }
     

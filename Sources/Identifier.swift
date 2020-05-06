@@ -285,9 +285,9 @@ extension Identifier: CustomStringConvertible {
         case (8, 10):
             return "2nd Gen iPad Pro (11 inch, Wi-Fi+LTE)"
         case (8, 11):
-            return "4rd Gen iPad Pro (12.9 inch, Wi-Fi)"
+            return "4th Gen iPad Pro (12.9 inch, Wi-Fi)"
         case (8, 12):
-            return "4rd Gen iPad Pro (12.9 inch, Wi-Fi+LTE)"
+            return "4th Gen iPad Pro (12.9 inch, Wi-Fi+LTE)"
         case (11, 1):
             return "5th Gen iPad Mini (Wi-Fi)"
         case (11, 2):
