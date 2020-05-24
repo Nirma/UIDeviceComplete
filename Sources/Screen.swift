@@ -53,6 +53,7 @@ extension Screen {
         case (896, 2.0): return 6.1
         case (896, 3.0): return 6.5
         case (1024, _): return ipadSize1024()
+        case (1080, _): return 10.2
         case (1112, _): return 10.5
         case (1194, _): return 11.0
         case (1366, _): return 12.9
@@ -65,7 +66,6 @@ extension Screen {
         switch deviceModel {
         case .iPadMini, .iPadMini2, .iPadMini3, .iPadMini4, .iPadMini5: return 7.9
         case .iPadPro10_5Inch: return 10.5
-        case .iPadSevenGen: return 10.2
         default: return 9.7
         }
     }
@@ -80,7 +80,7 @@ extension Screen {
         case (480, _): return "3:2"
         case (568, _), (667, 3.0), (736, _), (667, 1.0), (667, 2.0): return "16:9"
         case (812, 3.0), (896, 2.0), (896, 3.0): return "19.5:9"
-        case (1024, _), (1112, _), (1366, _): return "4:3"
+        case (1024, _), (1112, _), (1366, _), (1080, _): return "4:3"
         // 3rd Gen iPad Pro aspect ratios still unknown
         default: return nil
         }
