@@ -43,7 +43,7 @@ extension Identifier {
 
         let version = identifierString.suffix(from: type.endIndex)
             .split(separator: ",")
-            .map { Int(String($0)) }
+            .map { Int($0) }
 
         let major: Int? = !version.isEmpty ? version[0] : nil
         let minor: Int? = version.count > 1 ? version[1] : nil
