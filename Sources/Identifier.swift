@@ -296,6 +296,14 @@ extension Identifier: CustomStringConvertible {
             return "3rd Gen iPad Air (Wi-Fi)"
         case (11, 4):
             return "3rd Gen iPad Air (Wi-Fi+LTE)"
+        case (13, 1):
+            return "4th Gen iPad Air (Wi-Fi)"
+        case (13, 2):
+            return "4th Gen iPad Air (Wi-Fi+LTE)"
+        case (11, 6):
+            return "8th Gen iPad (10.2 inch, WiFi)"
+        case (11, 7):
+            return "8th Gen iPad (10.2 inch, Cellular)"
         default:
             return "unknown"
         }
