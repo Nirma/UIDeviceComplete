@@ -55,6 +55,7 @@ extension Screen {
         case (1024, _): return ipadSize1024()
         case (1080, _): return 10.2
         case (1112, _): return 10.5
+        case (1180, _): return 10.9
         case (1194, _): return 11.0
         case (1366, _): return 12.9
         default: return nil
