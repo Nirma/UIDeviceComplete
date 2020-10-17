@@ -16,6 +16,6 @@ UIDevice that make UIDevice even more fun to work with.
   s.author           = { 'Nicholas Maccharoli' => 'nmaccharoli@gmail.com' }
   s.source           = { :git => 'https://github.com/Nirma/UIDeviceComplete.git', :tag => s.version.to_s }
  
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
   s.source_files = 'Sources/*.swift'
 end
