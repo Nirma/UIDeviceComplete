@@ -201,6 +201,8 @@ extension DeviceModel {
             return true
         case .iPhone11, .iPhone11Pro, .iPhone11ProMax:
             return true
+        case .iPhone12mini, .iPhone12, .iPhone12Pro, .iPhone12ProMax:
+            return true
             
         default:
           return false
