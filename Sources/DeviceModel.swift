@@ -118,7 +118,7 @@ extension DeviceModel {
             
         case (13, 1):           return .iPhone12mini
         case (13, 2):           return .iPhone12
-        case (13, 3):           return .iPhone11Pro
+        case (13, 3):           return .iPhone12Pro
         case (13, 4):           return .iPhone12ProMax
             
         default:                return .unknown
