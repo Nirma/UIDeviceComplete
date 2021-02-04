@@ -28,13 +28,7 @@ class System {
         var systemInfo = utsname()
         uname(&systemInfo)
 
-        // TODO: Find the source of the extra newlines that are getting appended in the end
-        // the cause of this could just be a larger buffer than nessisary getting allocated
-        // and the rest of the string being zeroed out.
-        let encoding: UInt = String.Encoding.ascii.rawValue
-        if let string = NSString(bytes: &systemInfo.machine, length: Int(_SYS_NAMELEN), encoding: encoding) {
-            let identifier = (string as String).components(separatedBy: "\0").first
-            
+        if let identifier = String(cString: &systemInfo.machine.0, encoding: .ascii) {
             // Simulator Check
             if identifier == "x86_64" || identifier == "i386" {
                 return ProcessInfo.processInfo.environment["SIMULATOR_MODEL_IDENTIFIER"]
