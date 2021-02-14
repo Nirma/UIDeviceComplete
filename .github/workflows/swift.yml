@@ -1,0 +1,12 @@
+name: Swift CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Test UIDeviceComplete
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Test
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "UIDeviceComplete.xcodeproj" -scheme "UIDeviceComplete" -destination "OS=14.3,name=iPhone 12 Pro" clean test | xcpretty
