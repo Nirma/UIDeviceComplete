@@ -49,6 +49,8 @@ public enum DeviceModel: CaseIterable {
     case iPadPro11Inch, iPadPro12_9Inch_ThirdGen
     
     case iPadPro11Inch_SecondGen, iPadPro12_9Inch_FourthGen
+    
+    case iPadPro11Inch_ThirdGen, iPadPro12_9Inch_FifthGen
 
     case iPodTouchFirstGen, iPodTouchSecondGen, iPodTouchThirdGen,
          iPodTouchFourthGen, iPodTouchFifthGen, iPodTouchSixthGen, iPodTouchSeventhGen
@@ -158,10 +160,14 @@ extension DeviceModel {
         case (7, 3), (7, 4):                  return .iPadPro10_5Inch
         case (8, 1), (8, 2), (8, 3), (8, 4):  return .iPadPro11Inch
         case (8, 9), (8, 10):                 return .iPadPro11Inch_SecondGen
+        case (13, 4), (13, 5), (13, 6), (13, 7):
+                                              return .iPadPro11Inch_ThirdGen
         case (6, 7), (6, 8):                  return .iPadPro12_9Inch
         case (7, 1), (7, 2):                  return .iPadPro12_9Inch_SecondGen
         case (8, 5), (8, 6), (8, 7), (8, 8):  return .iPadPro12_9Inch_ThirdGen
         case (8, 11), (8, 12):                return .iPadPro12_9Inch_FourthGen
+        case (13, 8), (13, 9), (13, 10), (13, 11):
+                                              return .iPadPro12_9Inch_FifthGen
         default:                              return .unknown
         }
     }
