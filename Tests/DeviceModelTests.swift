@@ -294,6 +294,17 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel1 == .iPadPro11Inch_SecondGen && deviceModel2 == .iPadPro11Inch_SecondGen, "DeviceModel - .iPadPro11Inch_SecondGen is failing")
     }
     
+    func testDeviceModelIPadPro11Inch_ThirdGen() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad13,4"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad13,5"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("iPad13,6"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("iPad13,7"))
+        XCTAssert(deviceModel1 == .iPadPro11Inch_ThirdGen &&
+                    deviceModel2 == .iPadPro11Inch_ThirdGen &&
+                    deviceModel3 == .iPadPro11Inch_ThirdGen &&
+                    deviceModel4 == .iPadPro11Inch_ThirdGen, "DeviceModel - .iPadPro11Inch_ThirdGen is failing")
+    }
+    
     func testDeviceModelIPadPro12_9Inch() {
         let deviceModel1 = DeviceModel(identifier: Identifier("iPad6,7"))
         let deviceModel2 = DeviceModel(identifier: Identifier("iPad6,8"))
@@ -318,6 +329,16 @@ class DeviceModelTests: XCTestCase {
         let deviceModel1 = DeviceModel(identifier: Identifier("iPad8,11"))
         let deviceModel2 = DeviceModel(identifier: Identifier("iPad8,12"))
         XCTAssert(deviceModel1 == .iPadPro12_9Inch_FourthGen && deviceModel2 == .iPadPro12_9Inch_FourthGen, "DeviceModel - .iPadPro12_9Inch_FourthGen is failing")
+    }
+    func testDeviceModelIPadPro12_9Inch_FifthGen() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad13,8"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad13,9"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("iPad13,10"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("iPad13,11"))
+        XCTAssert(deviceModel1 == .iPadPro12_9Inch_FifthGen &&
+                    deviceModel2 == .iPadPro12_9Inch_FifthGen &&
+                    deviceModel3 == .iPadPro12_9Inch_FifthGen &&
+                    deviceModel4 == .iPadPro12_9Inch_FifthGen, "DeviceModel - .iPadPro12_9Inch_FifthGen is failing")
     }
     
     func testDeviceModelIPadMini5() {
