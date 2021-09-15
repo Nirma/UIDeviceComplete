@@ -176,6 +176,27 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel == .iPhone12ProMax , "DeviceModel - .iPhone12ProMax is failing")
     }
     
+    func testDeviceModelIPhone13Mini() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,4"))
+        XCTAssert(deviceModel == .iPhone13mini , "DeviceModel - .iPhone13mini is failing")
+    }
+    
+    func testDeviceModelIPhone13() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,5"))
+        XCTAssert(deviceModel == .iPhone13 , "DeviceModel - .iPhone13 is failing")
+    }
+    
+    func testDeviceModelIPhone13Pro() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,2"))
+        XCTAssert(deviceModel == .iPhone13Pro , "DeviceModel - .iPhone13Pro is failing")
+    }
+    
+    func testDeviceModelIPhone13ProMax() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,3"))
+        XCTAssert(deviceModel == .iPhone13ProMax , "DeviceModel - .iPhone13ProMax is failing")
+    }
+    
+    
     // MARK: - iPad Device Model tests
     
     func testDeviceModelIPadFirstGen() {
@@ -404,8 +425,11 @@ class DeviceModelTests: XCTestCase {
     
     // MARK: Notch test
     func testHasNotch() {
-      let notchModels: [DeviceModel] = [.iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR, .iPhone11, .iPhone11Pro, .iPhone11ProMax,
-                                        .iPhone12, .iPhone12Pro, .iPhone12ProMax, .iPhone12mini]
+      let notchModels: [DeviceModel] = [.iPhoneX,
+                                        .iPhoneXS, .iPhoneXSMax, .iPhoneXR,
+                                        .iPhone11, .iPhone11Pro, .iPhone11ProMax,
+                                        .iPhone12, .iPhone12Pro, .iPhone12ProMax, .iPhone12mini,
+                                        .iPhone13, .iPhone13mini, .iPhone13Pro, .iPhone13ProMax]
 
       let noNotchModels: [DeviceModel] = DeviceModel.allCases.filter( { !notchModels.contains($0) })
 
