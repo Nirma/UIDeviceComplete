@@ -250,6 +250,12 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel1 == .iPadEighthGen && deviceModel2 == .iPadEighthGen , "DeviceModel - .iPadEighthGen is failing")
     }
     
+    func testDeviceModelIPadNinthGen() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad12,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad12,2"))
+        XCTAssert(deviceModel1 == .iPadNinthGen && deviceModel2 == .iPadNinthGen , "DeviceModel - .iPadNinthGen is failing")
+    }
+    
     func testDeviceModelIPadAir() {
         let deviceModel1 = DeviceModel(identifier: Identifier("iPad4,1"))
         let deviceModel2 = DeviceModel(identifier: Identifier("iPad4,2"))
@@ -366,6 +372,12 @@ class DeviceModelTests: XCTestCase {
         let deviceModel1 = DeviceModel(identifier: Identifier("iPad11,1"))
         let deviceModel2 = DeviceModel(identifier: Identifier("iPad11,2"))
         XCTAssert(deviceModel1 == .iPadMini5 && deviceModel2 == .iPadMini5 , "DeviceModel - .iPadMini5 is failing")
+    }
+    
+    func testDeviceModelIPadMini6() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad14,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad14,2"))
+        XCTAssert(deviceModel1 == .iPadMini6 && deviceModel2 == .iPadMini6 , "DeviceModel - .iPadMini6 is failing")
     }
     
     func testDeviceModelIPadAir4() {

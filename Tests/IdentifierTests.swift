@@ -280,6 +280,12 @@ class IdentifierTests: XCTestCase {
 
     // MARK: - iPad
     
+    func testDisplayStringiPad14v2() {
+        XCTAssert(Identifier("iPad14,2").description == "6th Gen iPad mini (8.3 inch, Wi-Fi+5G)", "iPad14,2 is failing to produce a common device model string")
+    }
+    func testDisplayStringiPad14v1() {
+        XCTAssert(Identifier("iPad14,1").description == "6th Gen iPad mini (8.3 inch, Wi-Fi)", "iPad14,1 is failing to produce a common device model string")
+    }
     func testDisplayStringiPad13v11() {
         XCTAssert(Identifier("iPad13,11").description == "5th Gen iPad Pro (12.9 inch, Wi-Fi+5G, 16GB RAM)", "iPad13,11 is failing to produce a common device model string")
     }
@@ -311,6 +317,14 @@ class IdentifierTests: XCTestCase {
     
     func testDisplayStringiPad13v1() {
         XCTAssert(Identifier("iPad13,1").description == "4th Gen iPad Air (Wi-Fi)", "iPad13,1 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringiPad12v2() {
+        XCTAssert(Identifier("iPad12,2").description == "9th Gen iPad (10.2 inch, Wi-Fi+LTE)", "iPad12,2 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringiPad12v1() {
+        XCTAssert(Identifier("iPad12,1").description == "9th Gen iPad (10.2 inch, Wi-Fi)", "iPad12,1 is failing to produce a common device model string")
     }
     
     func testDisplayStringiPad11v7() {
