@@ -158,6 +158,14 @@ extension Identifier: CustomStringConvertible {
             return "iPhone 12 Pro"
         case (13, 4):
             return "iPhone 12 Pro Max"
+        case (14, 2):
+            return "iPhone 13 Pro"
+        case (14, 3):
+            return "iPhone 13 Pro Max"
+        case (14, 4):
+            return "iPhone 13 mini"
+        case (14, 5):
+            return "iPhone 13"
 
         default:
             return "unknown"
@@ -327,6 +335,14 @@ extension Identifier: CustomStringConvertible {
             return "5th Gen iPad Pro (12.9 inch, Wi-Fi+5G)"
         case (13, 11):
             return "5th Gen iPad Pro (12.9 inch, Wi-Fi+5G, 16GB RAM)"
+        case (12, 1):
+            return "9th Gen iPad (10.2 inch, Wi-Fi)"
+        case (12, 2):
+            return "9th Gen iPad (10.2 inch, Wi-Fi+LTE)"
+        case (14, 1):
+            return "6th Gen iPad mini (8.3 inch, Wi-Fi)"
+        case (14, 2):
+            return "6th Gen iPad mini (8.3 inch, Wi-Fi+5G)"
         default:
             return "unknown"
         }

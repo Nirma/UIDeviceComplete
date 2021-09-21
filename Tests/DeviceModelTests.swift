@@ -176,6 +176,27 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel == .iPhone12ProMax , "DeviceModel - .iPhone12ProMax is failing")
     }
     
+    func testDeviceModelIPhone13Mini() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,4"))
+        XCTAssert(deviceModel == .iPhone13mini , "DeviceModel - .iPhone13mini is failing")
+    }
+    
+    func testDeviceModelIPhone13() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,5"))
+        XCTAssert(deviceModel == .iPhone13 , "DeviceModel - .iPhone13 is failing")
+    }
+    
+    func testDeviceModelIPhone13Pro() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,2"))
+        XCTAssert(deviceModel == .iPhone13Pro , "DeviceModel - .iPhone13Pro is failing")
+    }
+    
+    func testDeviceModelIPhone13ProMax() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,3"))
+        XCTAssert(deviceModel == .iPhone13ProMax , "DeviceModel - .iPhone13ProMax is failing")
+    }
+    
+    
     // MARK: - iPad Device Model tests
     
     func testDeviceModelIPadFirstGen() {
@@ -227,6 +248,12 @@ class DeviceModelTests: XCTestCase {
         let deviceModel1 = DeviceModel(identifier: Identifier("iPad11,6"))
         let deviceModel2 = DeviceModel(identifier: Identifier("iPad11,7"))
         XCTAssert(deviceModel1 == .iPadEighthGen && deviceModel2 == .iPadEighthGen , "DeviceModel - .iPadEighthGen is failing")
+    }
+    
+    func testDeviceModelIPadNinthGen() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad12,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad12,2"))
+        XCTAssert(deviceModel1 == .iPadNinthGen && deviceModel2 == .iPadNinthGen , "DeviceModel - .iPadNinthGen is failing")
     }
     
     func testDeviceModelIPadAir() {
@@ -347,6 +374,12 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel1 == .iPadMini5 && deviceModel2 == .iPadMini5 , "DeviceModel - .iPadMini5 is failing")
     }
     
+    func testDeviceModelIPadMini6() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPad14,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPad14,2"))
+        XCTAssert(deviceModel1 == .iPadMini6 && deviceModel2 == .iPadMini6 , "DeviceModel - .iPadMini6 is failing")
+    }
+    
     func testDeviceModelIPadAir4() {
         let deviceModel1 = DeviceModel(identifier: Identifier("iPad13,1"))
         let deviceModel2 = DeviceModel(identifier: Identifier("iPad13,2"))
@@ -404,8 +437,11 @@ class DeviceModelTests: XCTestCase {
     
     // MARK: Notch test
     func testHasNotch() {
-      let notchModels: [DeviceModel] = [.iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR, .iPhone11, .iPhone11Pro, .iPhone11ProMax,
-                                        .iPhone12, .iPhone12Pro, .iPhone12ProMax, .iPhone12mini]
+      let notchModels: [DeviceModel] = [.iPhoneX,
+                                        .iPhoneXS, .iPhoneXSMax, .iPhoneXR,
+                                        .iPhone11, .iPhone11Pro, .iPhone11ProMax,
+                                        .iPhone12, .iPhone12Pro, .iPhone12ProMax, .iPhone12mini,
+                                        .iPhone13, .iPhone13mini, .iPhone13Pro, .iPhone13ProMax]
 
       let noNotchModels: [DeviceModel] = DeviceModel.allCases.filter( { !notchModels.contains($0) })
 
