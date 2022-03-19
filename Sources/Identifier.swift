@@ -318,7 +318,7 @@ extension Identifier: CustomStringConvertible {
         case (13, 16):
             return "5th Gen iPad Air (Wi-Fi)"
         case (13, 17):
-            return "5th Gen iPad Air (Wi-Fi+LTE)"
+            return "5th Gen iPad Air (Wi-Fi+5G)"
         case (13, 2):
             return "4th Gen iPad Air (Wi-Fi+LTE)"
         case (11, 6):
