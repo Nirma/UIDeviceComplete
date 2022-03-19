@@ -161,7 +161,7 @@ extension DeviceModel {
         case (5, 3), (5, 4):                  return .iPadAir2
         case (11, 3), (11, 4):                return .iPadAir3
         case (13, 1), (13, 2):                return .iPadAir4
-        case (13, 17), (13, 18):              return .iPadAir5
+        case (13, 16), (13, 17):              return .iPadAir5
         case (2, 5), (2, 6), (2, 7):          return .iPadMini
         case (4, 4), (4, 5), (4, 6):          return .iPadMini2
         case (4, 7), (4, 8), (4, 9):          return .iPadMini3

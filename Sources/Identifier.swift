@@ -167,7 +167,7 @@ extension Identifier: CustomStringConvertible {
         case (14, 5):
             return "iPhone 13"
         case (14, 6):
-            return "iPhone SE (3nd Gen)"
+            return "iPhone SE (3rd Gen)"
 
         default:
             return "unknown"
@@ -315,10 +315,10 @@ extension Identifier: CustomStringConvertible {
             return "3rd Gen iPad Air (Wi-Fi+LTE)"
         case (13, 1):
             return "4th Gen iPad Air (Wi-Fi)"
-        case (13, 17):
+        case (13, 16):
             return "5th Gen iPad Air (Wi-Fi)"
-        case (13, 18):
-            return "5th Gen iPad Air (Wi-Fi+LTE)"
+        case (13, 17):
+            return "5th Gen iPad Air (Wi-Fi+5G)"
         case (13, 2):
             return "4th Gen iPad Air (Wi-Fi+LTE)"
         case (11, 6):
