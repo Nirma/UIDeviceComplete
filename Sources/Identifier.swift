@@ -167,7 +167,7 @@ extension Identifier: CustomStringConvertible {
         case (14, 5):
             return "iPhone 13"
         case (14, 6):
-            return "iPhone SE (3nd Gen)"
+            return "iPhone SE (3rd Gen)"
 
         default:
             return "unknown"
