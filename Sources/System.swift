@@ -33,7 +33,6 @@ class System {
             }}) {
             if identifier == "x86_64" || identifier == "i386" {
                 return ProcessInfo.processInfo.environment["SIMULATOR_MODEL_IDENTIFIER"]
-
             }
             return identifier
         }
