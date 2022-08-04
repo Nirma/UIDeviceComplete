@@ -28,10 +28,11 @@ class System {
         var systemInfo = utsname()
         uname(&systemInfo)
         if let identifier = withUnsafePointer(to: &systemInfo.machine, {
-            $0.withMemoryRebound(to: CChar.self, capacity: 1) {
-                ptr in String.init(validatingUTF8: ptr)
+            $0.withMemoryRebound(to: CChar.self, capacity: Int(_SYS_NAMELEN)) {
+                ptr in String(cString: ptr)
             }}) {
-            if identifier == "x86_64" || identifier == "i386" {
+            // Simulator Check
+            if identifier == "x86_64" || identifier == "i386" || identifier == "arm64" {
                 return ProcessInfo.processInfo.environment["SIMULATOR_MODEL_IDENTIFIER"]
             }
             return identifier
