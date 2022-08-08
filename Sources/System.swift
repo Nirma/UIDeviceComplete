@@ -27,17 +27,15 @@ class System {
     static var name: String? {
         var systemInfo = utsname()
         uname(&systemInfo)
-
-        if let identifier = String(cString: &systemInfo.machine.0, encoding: .ascii) {
-            // Simulator Check
-            if identifier == "x86_64" || identifier == "i386" {
-                return ProcessInfo.processInfo.environment["SIMULATOR_MODEL_IDENTIFIER"]
+        let identifier = withUnsafePointer(to: &systemInfo.machine, {
+            $0.withMemoryRebound(to: CChar.self, capacity: Int(_SYS_NAMELEN)) {
+                ptr in String(cString: ptr)
             }
-            
-            return identifier
+        })
+        // Simulator Check
+        if identifier == "x86_64" || identifier == "i386" || identifier == "arm64" {
+            return ProcessInfo.processInfo.environment["SIMULATOR_MODEL_IDENTIFIER"]
         }
-        
-        
-        return nil
+        return identifier
     }
 }
