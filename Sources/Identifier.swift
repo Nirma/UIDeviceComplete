@@ -166,6 +166,14 @@ extension Identifier: CustomStringConvertible {
             return "iPhone 13 mini"
         case (14, 5):
             return "iPhone 13"
+        case (14, 7):
+            return "iPhone 14"
+        case (14, 8):
+            return "iPhone 14 Plus"
+        case (15, 2):
+            return "iPhone 14 Pro"
+        case (15, 3):
+            return "iPhone 14 Pro Max"
 
         default:
             return "unknown"
