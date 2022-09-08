@@ -27,7 +27,7 @@ public enum DeviceModel: CaseIterable {
     case iPhone5, iPhone5C, iPhone5S
     case iPhone6, iPhone6Plus
     case iPhone6S, iPhone6SPlus
-    case iPhoneSE, iPhoneSE2
+    case iPhoneSE, iPhoneSE2, iPhoneSE3 
     case iPhone7, iPhone7Plus
     case iPhone8, iPhone8Plus
     case iPhoneX
@@ -44,7 +44,7 @@ public enum DeviceModel: CaseIterable {
 
     case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen, iPadSixthGen, iPadSeventhGen, iPadEighthGen, iPadNinthGen
 
-    case iPadAir, iPadAir2, iPadAir3, iPadAir4
+    case iPadAir, iPadAir2, iPadAir3, iPadAir4, iPadAir5
 
     case iPadMini, iPadMini2, iPadMini3, iPadMini4, iPadMini5, iPadMini6
 
@@ -132,12 +132,14 @@ extension DeviceModel {
         case (14, 2):           return .iPhone13Pro
         case (14, 3):           return .iPhone13ProMax
             
+        case (14, 6):           return .iPhoneSE3 
+
         case (14, 7):           return .iPhone14
         case (14, 8):           return .iPhone14Plus
             
         case (15, 2):           return .iPhone14Pro
         case (15, 3):           return .iPhone14ProMax
-            
+        
         default:                return .unknown
         }
     }
@@ -167,6 +169,7 @@ extension DeviceModel {
         case (5, 3), (5, 4):                  return .iPadAir2
         case (11, 3), (11, 4):                return .iPadAir3
         case (13, 1), (13, 2):                return .iPadAir4
+        case (13, 16), (13, 17):              return .iPadAir5
         case (2, 5), (2, 6), (2, 7):          return .iPadMini
         case (4, 4), (4, 5), (4, 6):          return .iPadMini2
         case (4, 7), (4, 8), (4, 9):          return .iPadMini3
