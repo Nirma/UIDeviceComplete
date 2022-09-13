@@ -472,7 +472,8 @@ class DeviceModelTests: XCTestCase {
                                         .iPhoneXS, .iPhoneXSMax, .iPhoneXR,
                                         .iPhone11, .iPhone11Pro, .iPhone11ProMax,
                                         .iPhone12, .iPhone12Pro, .iPhone12ProMax, .iPhone12mini,
-                                        .iPhone13, .iPhone13mini, .iPhone13Pro, .iPhone13ProMax]
+                                        .iPhone13, .iPhone13mini, .iPhone13Pro, .iPhone13ProMax,
+                                        .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax]
 
       let noNotchModels: [DeviceModel] = DeviceModel.allCases.filter( { !notchModels.contains($0) })
 
