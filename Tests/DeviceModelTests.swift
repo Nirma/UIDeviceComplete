@@ -201,6 +201,26 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel == .iPhone13ProMax , "DeviceModel - .iPhone13ProMax is failing")
     }
     
+    func testDeviceModelIPhone14() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,7"))
+        XCTAssert(deviceModel == .iPhone14 , "DeviceModel - .iPhone14 is failing")
+    }
+    
+    func testDeviceModelIPhone14Plus() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,8"))
+        XCTAssert(deviceModel == .iPhone14Plus , "DeviceModel - .iPhone14Plus is failing")
+    }
+    
+    func testDeviceModelIPhone14Pro() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone15,2"))
+        XCTAssert(deviceModel == .iPhone14Pro , "DeviceModel - .iPhone14Pro is failing")
+    }
+    
+    func testDeviceModelIPhone14ProMax() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone15,3"))
+        XCTAssert(deviceModel == .iPhone14ProMax , "DeviceModel - .iPhone14ProMax is failing")
+    }
+    
     
     // MARK: - iPad Device Model tests
     
