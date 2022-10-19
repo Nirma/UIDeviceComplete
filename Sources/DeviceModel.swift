@@ -42,7 +42,7 @@ public enum DeviceModel: CaseIterable {
     case iPhone14, iPhone14Plus
     case iPhone14Pro, iPhone14ProMax
 
-    case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen, iPadSixthGen, iPadSeventhGen, iPadEighthGen, iPadNinthGen
+    case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen, iPadSixthGen, iPadSeventhGen, iPadEighthGen, iPadNinthGen, iPadTenthGen
 
     case iPadAir, iPadAir2, iPadAir3, iPadAir4, iPadAir5
 
@@ -55,6 +55,8 @@ public enum DeviceModel: CaseIterable {
     case iPadPro11Inch_SecondGen, iPadPro12_9Inch_FourthGen
     
     case iPadPro11Inch_ThirdGen, iPadPro12_9Inch_FifthGen
+            
+    case iPadPro11Inch_FourthGen, iPadPro12_9Inch_SixthGen
 
     case iPodTouchFirstGen, iPodTouchSecondGen, iPodTouchThirdGen,
          iPodTouchFourthGen, iPodTouchFifthGen, iPodTouchSixthGen, iPodTouchSeventhGen
@@ -164,7 +166,8 @@ extension DeviceModel {
         case (7, 5), (7, 6):                  return .iPadSixthGen
         case (7, 11), (7, 12):                return .iPadSeventhGen
         case (11, 6), (11, 7):                return .iPadEighthGen
-        case (12, 1), (12, 2):                return .iPadNinthGen
+        case (12, 1), (12, 2):                return .iPadNinthGen                
+        case (13, 18), (13, 19):              return .iPadTenthGen
         case (4, 1), (4, 2), (4, 3):          return .iPadAir
         case (5, 3), (5, 4):                  return .iPadAir2
         case (11, 3), (11, 4):                return .iPadAir3
@@ -182,12 +185,16 @@ extension DeviceModel {
         case (8, 9), (8, 10):                 return .iPadPro11Inch_SecondGen
         case (13, 4), (13, 5), (13, 6), (13, 7):
                                               return .iPadPro11Inch_ThirdGen
+        case (14, 3), (14, 4):
+                                              return .iPadPro11Inch_FourthGen
         case (6, 7), (6, 8):                  return .iPadPro12_9Inch
         case (7, 1), (7, 2):                  return .iPadPro12_9Inch_SecondGen
         case (8, 5), (8, 6), (8, 7), (8, 8):  return .iPadPro12_9Inch_ThirdGen
         case (8, 11), (8, 12):                return .iPadPro12_9Inch_FourthGen
         case (13, 8), (13, 9), (13, 10), (13, 11):
                                               return .iPadPro12_9Inch_FifthGen
+        case (14, 5), (14, 6):
+                                              return .iPadPro12_9Inch_SixthGen
         default:                              return .unknown
         }
     }
