@@ -192,13 +192,33 @@ class DeviceModelTests: XCTestCase {
     }
     
     func testDeviceModelIPhone13ProMax() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,3"))
+        XCTAssert(deviceModel == .iPhone13ProMax , "DeviceModel - .iPhone13ProMax is failing")
+    }
+    
+    func testDeviceModelIPhoneSE3() {
         let deviceModel = DeviceModel(identifier: Identifier("iPhone14,6"))
         XCTAssert(deviceModel == .iPhoneSE3 , "DeviceModel - .iPhoneSE3 is failing")
     }
     
-    func testDeviceModelIPhoneSE3() {
-        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,3"))
-        XCTAssert(deviceModel == .iPhone13ProMax , "DeviceModel - .iPhone13ProMax is failing")
+    func testDeviceModelIPhone14() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,7"))
+        XCTAssert(deviceModel == .iPhone14 , "DeviceModel - .iPhone14 is failing")
+    }
+    
+    func testDeviceModelIPhone14Plus() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone14,8"))
+        XCTAssert(deviceModel == .iPhone14Plus , "DeviceModel - .iPhone14Plus is failing")
+    }
+    
+    func testDeviceModelIPhone14Pro() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone15,2"))
+        XCTAssert(deviceModel == .iPhone14Pro , "DeviceModel - .iPhone14Pro is failing")
+    }
+    
+    func testDeviceModelIPhone14ProMax() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone15,3"))
+        XCTAssert(deviceModel == .iPhone14ProMax , "DeviceModel - .iPhone14ProMax is failing")
     }
     
     
@@ -452,7 +472,8 @@ class DeviceModelTests: XCTestCase {
                                         .iPhoneXS, .iPhoneXSMax, .iPhoneXR,
                                         .iPhone11, .iPhone11Pro, .iPhone11ProMax,
                                         .iPhone12, .iPhone12Pro, .iPhone12ProMax, .iPhone12mini,
-                                        .iPhone13, .iPhone13mini, .iPhone13Pro, .iPhone13ProMax]
+                                        .iPhone13, .iPhone13mini, .iPhone13Pro, .iPhone13ProMax,
+                                        .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax]
 
       let noNotchModels: [DeviceModel] = DeviceModel.allCases.filter( { !notchModels.contains($0) })
 
