@@ -366,7 +366,7 @@ extension Identifier: CustomStringConvertible {
         case (13, 18):
             return "10th Gen iPad (10.9 inch, Wi-Fi)"
         case (13, 19):
-            return "10th Gen iPad (10.9 inch, Wi-Fi+LTE)"
+            return "10th Gen iPad (10.9 inch, Wi-Fi+5G)"
         case (14, 1):
             return "6th Gen iPad mini (8.3 inch, Wi-Fi)"
         case (14, 2):
