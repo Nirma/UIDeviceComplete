@@ -492,11 +492,23 @@ class DeviceModelTests: XCTestCase {
                                         .iPhone11, .iPhone11Pro, .iPhone11ProMax,
                                         .iPhone12, .iPhone12Pro, .iPhone12ProMax, .iPhone12mini,
                                         .iPhone13, .iPhone13mini, .iPhone13Pro, .iPhone13ProMax,
-                                        .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax]
+                                        .iPhone14, .iPhone14Plus]
 
         let noNotchModels: [DeviceModel] = DeviceModel.allCases.filter( { !notchModels.contains($0) })
 
         notchModels.forEach { XCTAssertTrue($0.hasNotch) }
         noNotchModels.forEach { XCTAssertFalse($0.hasNotch) }
+    }
+    
+    // MARK: Dynamic Island Test
+    
+    func testHasDynamicIsland() {
+        let withModels: [DeviceModel] = [.iPhone14Pro, .iPhone14ProMax,
+                                         .iPhone15, .iPhone15Plus, .iPhone15Pro, .iPhone15ProMax]
+
+        let withoutModels: [DeviceModel] = DeviceModel.allCases.filter( { !withModels.contains($0) })
+
+        withModels.forEach { XCTAssertTrue($0.hasDynamicIsland) }
+        withoutModels.forEach { XCTAssertFalse($0.hasDynamicIsland) }
     }
 }

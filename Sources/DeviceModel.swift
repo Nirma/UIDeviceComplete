@@ -246,7 +246,19 @@ extension DeviceModel {
             return true
         case .iPhone13mini, .iPhone13, .iPhone13Pro, .iPhone13ProMax:
             return true
-        case .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax:
+        case .iPhone14, .iPhone14Plus:
+            return true
+            
+        default:
+          return false
+        }
+    }
+    
+    public var hasDynamicIsland: Bool {
+        switch self {
+        case .iPhone14Pro, .iPhone14ProMax:
+            return true
+        case .iPhone15, .iPhone15Plus, .iPhone15Pro, .iPhone15ProMax:
             return true
             
         default:
