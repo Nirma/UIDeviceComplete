@@ -179,6 +179,15 @@ extension Identifier: CustomStringConvertible {
         case (15, 3):
             return "iPhone 14 Pro Max"
             
+        case (15, 4):
+            return "iPhone 15"
+        case (15, 5):
+            return "iPhone 15 Plus"
+        case (16, 1):
+            return "iPhone 15 Pro"
+        case (16, 2):
+            return "iPhone 15 Pro Max"
+            
         default:
             return "unknown"
         }
