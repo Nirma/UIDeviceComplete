@@ -487,16 +487,16 @@ class DeviceModelTests: XCTestCase {
     
     // MARK: Notch test
     func testHasNotch() {
-      let notchModels: [DeviceModel] = [.iPhoneX,
+        let notchModels: [DeviceModel] = [.iPhoneX,
                                         .iPhoneXS, .iPhoneXSMax, .iPhoneXR,
                                         .iPhone11, .iPhone11Pro, .iPhone11ProMax,
                                         .iPhone12, .iPhone12Pro, .iPhone12ProMax, .iPhone12mini,
                                         .iPhone13, .iPhone13mini, .iPhone13Pro, .iPhone13ProMax,
                                         .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax]
 
-      let noNotchModels: [DeviceModel] = DeviceModel.allCases.filter( { !notchModels.contains($0) })
+        let noNotchModels: [DeviceModel] = DeviceModel.allCases.filter( { !notchModels.contains($0) })
 
-      notchModels.forEach { XCTAssertTrue($0.hasNotch) }
-      noNotchModels.forEach { XCTAssertFalse($0.hasNotch) }
+        notchModels.forEach { XCTAssertTrue($0.hasNotch) }
+        noNotchModels.forEach { XCTAssertFalse($0.hasNotch) }
     }
 }
