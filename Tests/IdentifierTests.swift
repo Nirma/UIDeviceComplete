@@ -66,6 +66,22 @@ class IdentifierTests: XCTestCase {
 
     // MARK: - iPhone String Description tests
     
+    func testDisplayStringiPhone16v2() {
+        XCTAssert(Identifier("iPhone16,2").description == "iPhone 15 Pro Max", "iPhone16,2 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringiPhone16v1() {
+        XCTAssert(Identifier("iPhone16,1").description == "iPhone 15 Pro", "iPhone16,1 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringiPhone15v5() {
+        XCTAssert(Identifier("iPhone15,5").description == "iPhone 15 Plus", "iPhone15,5 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringiPhone15v4() {
+        XCTAssert(Identifier("iPhone15,4").description == "iPhone 15", "iPhone15,4 is failing to produce a common device model string")
+    }
+    
     func testDisplayStringiPhone15v3() {
         XCTAssert(Identifier("iPhone15,3").description == "iPhone 14 Pro Max", "iPhone15,3 is failing to produce a common device model string")
     }
