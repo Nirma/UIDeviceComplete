@@ -26,6 +26,7 @@ public enum DeviceFamily: String {
     case iPhone
     case iPod
     case iPad
+    case watch
     case unknown
 
     public init(rawValue: String) {
@@ -36,6 +37,8 @@ public enum DeviceFamily: String {
             self = .iPod
         case "iPad":
             self = .iPad
+        case "Watch":
+            self = .watch
         default:
             self = .unknown
         }

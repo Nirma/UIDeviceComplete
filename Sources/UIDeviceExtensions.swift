@@ -21,9 +21,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+#if os(iOS)
 import UIKit
+public typealias DCDevice = UIDevice
+#elseif os(watchOS)
+import WatchKit
+public typealias DCDevice = WKInterfaceDevice
+#endif
 
-public extension UIDeviceComplete where Base == UIDevice {
+public extension UIDeviceComplete where Base == DCDevice {
 
     private var identifier: Identifier? {
         return System.name.flatMap {
@@ -45,7 +51,8 @@ public extension UIDeviceComplete where Base == UIDevice {
     var commonDeviceName: String {
         return identifier?.description ?? "unknown"
     }
-
+    
+    #if os(iOS)
     /// Device family iPhone
     var isIphone: Bool {
         return deviceFamily == .iPhone
@@ -60,13 +67,14 @@ public extension UIDeviceComplete where Base == UIDevice {
     var isIpod: Bool {
         return deviceFamily == .iPod
     }
-
+    #endif
+    
 }
 
-
+#if os(iOS)
 // MARK: - Screen Size Detection
 
-public extension UIDeviceComplete where Base == UIDevice {
+public extension UIDeviceComplete where Base == DCDevice {
     var screenSize: Screen {
         let scale: Double = Double(UIScreen.main.scale)
         let width: Double = Double(UIScreen.main.bounds.width)
@@ -75,3 +83,4 @@ public extension UIDeviceComplete where Base == UIDevice {
         return Screen(width: width, height: height, scale: scale)
     }
 }
+#endif
