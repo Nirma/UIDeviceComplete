@@ -221,6 +221,25 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel == .iPhone14ProMax , "DeviceModel - .iPhone14ProMax is failing")
     }
     
+    func testDeviceModelIPhone15() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone15,4"))
+        XCTAssert(deviceModel == .iPhone15 , "DeviceModel - .iPhone15 is failing")
+    }
+    
+    func testDeviceModelIPhone15Plus() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone15,5"))
+        XCTAssert(deviceModel == .iPhone15Plus , "DeviceModel - .iPhone15Plus is failing")
+    }
+    
+    func testDeviceModelIPhone15Pro() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone16,1"))
+        XCTAssert(deviceModel == .iPhone15Pro , "DeviceModel - .iPhone15Pro is failing")
+    }
+    
+    func testDeviceModelIPhone15ProMax() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone16,2"))
+        XCTAssert(deviceModel == .iPhone15ProMax , "DeviceModel - .iPhone15ProMax is failing")
+    }
     
     // MARK: - iPad Device Model tests
     
@@ -468,16 +487,28 @@ class DeviceModelTests: XCTestCase {
     
     // MARK: Notch test
     func testHasNotch() {
-      let notchModels: [DeviceModel] = [.iPhoneX,
+        let notchModels: [DeviceModel] = [.iPhoneX,
                                         .iPhoneXS, .iPhoneXSMax, .iPhoneXR,
                                         .iPhone11, .iPhone11Pro, .iPhone11ProMax,
                                         .iPhone12, .iPhone12Pro, .iPhone12ProMax, .iPhone12mini,
                                         .iPhone13, .iPhone13mini, .iPhone13Pro, .iPhone13ProMax,
-                                        .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax]
+                                        .iPhone14, .iPhone14Plus]
 
-      let noNotchModels: [DeviceModel] = DeviceModel.allCases.filter( { !notchModels.contains($0) })
+        let noNotchModels: [DeviceModel] = DeviceModel.allCases.filter( { !notchModels.contains($0) })
 
-      notchModels.forEach { XCTAssertTrue($0.hasNotch) }
-      noNotchModels.forEach { XCTAssertFalse($0.hasNotch) }
+        notchModels.forEach { XCTAssertTrue($0.hasNotch) }
+        noNotchModels.forEach { XCTAssertFalse($0.hasNotch) }
+    }
+    
+    // MARK: Dynamic Island Test
+    
+    func testHasDynamicIsland() {
+        let withModels: [DeviceModel] = [.iPhone14Pro, .iPhone14ProMax,
+                                         .iPhone15, .iPhone15Plus, .iPhone15Pro, .iPhone15ProMax]
+
+        let withoutModels: [DeviceModel] = DeviceModel.allCases.filter( { !withModels.contains($0) })
+
+        withModels.forEach { XCTAssertTrue($0.hasDynamicIsland) }
+        withoutModels.forEach { XCTAssertFalse($0.hasDynamicIsland) }
     }
 }
