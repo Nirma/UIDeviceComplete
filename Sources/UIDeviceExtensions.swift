@@ -36,7 +36,7 @@ public extension UIDeviceComplete where Base == UIDevice {
         return identifier.flatMap { $0.type } ?? .unknown
     }
 
-    /// Specific model i.e iphone7 or iPhone7s
+    /// Get specific model name i.e `iPhone 15 Pro`
     var deviceModel: DeviceModel {
         return identifier.flatMap { DeviceModel(identifier: $0) } ?? .unknown
     }
