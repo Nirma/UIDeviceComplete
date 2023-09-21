@@ -63,7 +63,7 @@ class IdentifierTests: XCTestCase {
         )
     }
 
-
+    #if os(iOS)
     // MARK: - iPhone String Description tests
     
     func testDisplayStringiPhone16v2() {
@@ -611,4 +611,184 @@ class IdentifierTests: XCTestCase {
     func testDisplayStringiPad1v1() {
         XCTAssert(Identifier("iPad1,1").description == "iPad", "iPad1,1 is failing to produce a common device model string")
     }
+    #endif
+    
+    #if os(watchOS)
+    func testDisplayStringWatch1v1() {
+        XCTAssert(Identifier("Watch1,1").description == "Apple Watch (1st generation), 38mm case", "Watch1,1 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch1v2() {
+        XCTAssert(Identifier("Watch1,2").description == "Apple Watch (1st generation), 42mm case", "Watch1,2 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch2v3() {
+        XCTAssert(Identifier("Watch2,3").description == "Apple Watch Series 2, 38mm case", "Watch2,3 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch2v4() {
+        XCTAssert(Identifier("Watch2,4").description == "Apple Watch Series 2, 42mm case", "Watch2,4 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch2v6() {
+        XCTAssert(Identifier("Watch2,6").description == "Apple Watch Series 1, 38mm case", "Watch2,6 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch2v7() {
+        XCTAssert(Identifier("Watch2,7").description == "Apple Watch Series 1, 42mm case", "Watch2,7 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch3v1() {
+        XCTAssert(Identifier("Watch3,1").description == "Apple Watch Series 3, 38mm case (GPS + Cellular)", "Watch3,1 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch3v2() {
+        XCTAssert(Identifier("Watch3,2").description == "Apple Watch Series 3, 42mm case (GPS + Cellular)", "Watch3,2 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch3v3() {
+        XCTAssert(Identifier("Watch3,3").description == "Apple Watch Series 3, 38mm case (GPS)", "Watch3,3 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch3v4() {
+        XCTAssert(Identifier("Watch3,4").description == "Apple Watch Series 3, 42mm case (GPS)", "Watch3,4 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch4v1() {
+        XCTAssert(Identifier("Watch4,1").description == "Apple Watch Series 4, 40mm case (GPS)", "Watch4,1 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch4v2() {
+        XCTAssert(Identifier("Watch4,2").description == "Apple Watch Series 4, 44mm case (GPS)", "Watch4,2 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch4v3() {
+        XCTAssert(Identifier("Watch4,3").description == "Apple Watch Series 4, 40mm case (GPS + Cellular)", "Watch4,3 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch4v4() {
+        XCTAssert(Identifier("Watch4,4").description == "Apple Watch Series 4, 44mm case (GPS + Cellular)", "Watch4,4 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch5v1() {
+        XCTAssert(Identifier("Watch5,1").description == "Apple Watch Series 5, 40mm case (GPS)", "Watch5,1 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch5v2() {
+        XCTAssert(Identifier("Watch5,2").description == "Apple Watch Series 5, 44mm case (GPS)", "Watch5,2 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch5v3() {
+        XCTAssert(Identifier("Watch5,3").description == "Apple Watch Series 5, 40mm case (GPS + Cellular)", "Watch5,3 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch5v4() {
+        XCTAssert(Identifier("Watch5,4").description == "Apple Watch Series 5, 44mm case (GPS + Cellular)", "Watch5,4 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch5v9() {
+        XCTAssert(Identifier("Watch5,9").description == "Apple Watch SE, 40mm case (GPS)", "Watch5,9 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch5v10() {
+        XCTAssert(Identifier("Watch5,10").description == "Apple Watch SE, 44mm case (GPS)", "Watch5,10 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch5v11() {
+        XCTAssert(Identifier("Watch5,11").description == "Apple Watch SE, 40mm case (GPS + Cellular)", "Watch5,11 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch5v12() {
+        XCTAssert(Identifier("Watch5,12").description == "Apple Watch SE, 44mm case (GPS + Cellular)", "Watch5,12 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v1() {
+        XCTAssert(Identifier("Watch6,1").description == "Apple Watch Series 6, 40mm case (GPS)", "Watch6,1 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v2() {
+        XCTAssert(Identifier("Watch6,2").description == "Apple Watch Series 6, 44mm case (GPS)", "Watch6,2 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v3() {
+        XCTAssert(Identifier("Watch6,3").description == "Apple Watch Series 6, 40mm case (GPS + Cellular)", "Watch6,3 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v4() {
+        XCTAssert(Identifier("Watch6,4").description == "Apple Watch Series 6, 44mm case (GPS + Cellular)", "Watch6,4 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v6() {
+        XCTAssert(Identifier("Watch6,6").description == "Apple Watch Series 7, 41mm case (GPS)", "Watch6,6 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v7() {
+        XCTAssert(Identifier("Watch6,7").description == "Apple Watch Series 7, 45mm case (GPS)", "Watch6,7 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v8() {
+        XCTAssert(Identifier("Watch6,8").description == "Apple Watch Series 7, 41mm case (GPS + Cellular)", "Watch6,8 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v9() {
+        XCTAssert(Identifier("Watch6,9").description == "Apple Watch Series 7, 45mm case (GPS + Cellular)", "Watch6,9 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v10() {
+        XCTAssert(Identifier("Watch6,10").description == "Apple Watch SE (2nd Generation), 40mm case (GPS)", "Watch6,10 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v11() {
+        XCTAssert(Identifier("Watch6,11").description == "Apple Watch SE (2nd Generation), 44mm case (GPS)", "Watch6,11 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v12() {
+        XCTAssert(Identifier("Watch6,12").description == "Apple Watch SE (2nd Generation), 40mm case (GPS + Cellular)", "Watch6,12 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v13() {
+        XCTAssert(Identifier("Watch6,13").description == "Apple Watch SE (2nd Generation), 44mm case (GPS + Cellular)", "Watch6,13 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v14() {
+        XCTAssert(Identifier("Watch6,14").description == "Apple Watch Series 8, 41mm case (GPS)", "Watch6,14 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v15() {
+        XCTAssert(Identifier("Watch6,15").description == "Apple Watch Series 8, 45mm case (GPS)", "Watch6,15 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v16() {
+        XCTAssert(Identifier("Watch6,16").description == "Apple Watch Series 8, 41mm case (GPS + Cellular)", "Watch6,16 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v17() {
+        XCTAssert(Identifier("Watch6,17").description == "Apple Watch Series 8, 45mm case (GPS + Cellular)", "Watch6,17 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch6v18() {
+        XCTAssert(Identifier("Watch6,18").description == "Apple Watch Ultra", "Watch6,18 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch7v1() {
+        XCTAssert(Identifier("Watch7,1").description == "Apple Watch Series 9, 41mm case (GPS)", "Watch7,1 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch7v2() {
+        XCTAssert(Identifier("Watch7,2").description == "Apple Watch Series 9, 45mm case (GPS)", "Watch7,2 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch7v3() {
+        XCTAssert(Identifier("Watch7,3").description == "Apple Watch Series 9, 41mm case (GPS + Cellular)", "Watch7,3 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch7v4() {
+        XCTAssert(Identifier("Watch7,4").description == "Apple Watch Series 9, 45mm case (GPS + Cellular)", "Watch7,4 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch7v5() {
+        XCTAssert(Identifier("Watch7,5").description == "Apple Watch Ultra 2", "Watch7,5 is failing to produce a common device model string")
+    }
+    
+    #endif
 }

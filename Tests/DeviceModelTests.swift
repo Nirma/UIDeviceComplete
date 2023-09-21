@@ -28,6 +28,7 @@ import XCTest
 
 class DeviceModelTests: XCTestCase {
     
+    #if os(iOS)
     // MARK: - iPhone Device Model tests
     
     func testDeviceModelIPhone4() {
@@ -511,4 +512,140 @@ class DeviceModelTests: XCTestCase {
         withModels.forEach { XCTAssertTrue($0.hasDynamicIsland) }
         withoutModels.forEach { XCTAssertFalse($0.hasDynamicIsland) }
     }
+    #endif
+    
+    #if os(watchOS)
+    // MARK: - Apple Watch Model tests
+    
+    func testDeviceModelWatchFirstGen() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch1,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch1,2"))
+        XCTAssert(deviceModel1 == .firstGen, "DeviceModel - .firstGen is failing")
+        XCTAssert(deviceModel2 == .firstGen, "DeviceModel - .firstGen is failing")
+    }
+    
+    func testDeviceModelWatchSeries1() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch2,6"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch2,7"))
+        XCTAssert(deviceModel1 == .series1, "DeviceModel - .series1 is failing")
+        XCTAssert(deviceModel2 == .series1, "DeviceModel - .series1 is failing")
+    }
+    
+    func testDeviceModelWatchSeries2() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch2,3"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch2,4"))
+        XCTAssert(deviceModel1 == .series2, "DeviceModel - .series2 is failing")
+        XCTAssert(deviceModel2 == .series2, "DeviceModel - .series2 is failing")
+    }
+    
+    func testDeviceModelWatchSeries3() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch3,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch3,2"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("Watch3,3"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("Watch3,4"))
+        XCTAssert(deviceModel1 == .series3, "DeviceModel - .series3 is failing")
+        XCTAssert(deviceModel2 == .series3, "DeviceModel - .series3 is failing")
+        XCTAssert(deviceModel3 == .series3, "DeviceModel - .series3 is failing")
+        XCTAssert(deviceModel4 == .series3, "DeviceModel - .series3 is failing")
+    }
+    
+    func testDeviceModelWatchSeries4() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch4,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch4,2"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("Watch4,3"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("Watch4,4"))
+        XCTAssert(deviceModel1 == .series4, "DeviceModel - .series4 is failing")
+        XCTAssert(deviceModel2 == .series4, "DeviceModel - .series4 is failing")
+        XCTAssert(deviceModel3 == .series4, "DeviceModel - .series4 is failing")
+        XCTAssert(deviceModel4 == .series4, "DeviceModel - .series4 is failing")
+    }
+    
+    func testDeviceModelWatchSeries5() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch5,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch5,2"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("Watch5,3"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("Watch5,4"))
+        XCTAssert(deviceModel1 == .series5, "DeviceModel - .series5 is failing")
+        XCTAssert(deviceModel2 == .series5, "DeviceModel - .series5 is failing")
+        XCTAssert(deviceModel3 == .series5, "DeviceModel - .series5 is failing")
+        XCTAssert(deviceModel4 == .series5, "DeviceModel - .series5 is failing")
+    }
+    
+    func testDeviceModelWatchSE() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch5,9"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch5,10"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("Watch5,11"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("Watch5,12"))
+        XCTAssert(deviceModel1 == .se, "DeviceModel - .se is failing")
+        XCTAssert(deviceModel2 == .se, "DeviceModel - .se is failing")
+        XCTAssert(deviceModel3 == .se, "DeviceModel - .se is failing")
+        XCTAssert(deviceModel4 == .se, "DeviceModel - .se is failing")
+    }
+    
+    func testDeviceModelWatchSeries6() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch6,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch6,2"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("Watch6,3"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("Watch6,4"))
+        XCTAssert(deviceModel1 == .series6, "DeviceModel - .series6 is failing")
+        XCTAssert(deviceModel2 == .series6, "DeviceModel - .series6 is failing")
+        XCTAssert(deviceModel3 == .series6, "DeviceModel - .series6 is failing")
+        XCTAssert(deviceModel4 == .series6, "DeviceModel - .series6 is failing")
+    }
+    
+    func testDeviceModelWatchSeries7() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch6,6"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch6,7"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("Watch6,8"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("Watch6,9"))
+        XCTAssert(deviceModel1 == .series7, "DeviceModel - .series7 is failing")
+        XCTAssert(deviceModel2 == .series7, "DeviceModel - .series7 is failing")
+        XCTAssert(deviceModel3 == .series7, "DeviceModel - .series7 is failing")
+        XCTAssert(deviceModel4 == .series7, "DeviceModel - .series7 is failing")
+    }
+    
+    func testDeviceModelWatchSE2() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch6,10"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch6,11"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("Watch6,12"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("Watch6,13"))
+        XCTAssert(deviceModel1 == .se2, "DeviceModel - .se2 is failing")
+        XCTAssert(deviceModel2 == .se2, "DeviceModel - .se2 is failing")
+        XCTAssert(deviceModel3 == .se2, "DeviceModel - .se2 is failing")
+        XCTAssert(deviceModel4 == .se2, "DeviceModel - .se2 is failing")
+    }
+    
+    func testDeviceModelWatchSeries8() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch6,14"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch6,15"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("Watch6,16"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("Watch6,17"))
+        XCTAssert(deviceModel1 == .series8, "DeviceModel - .series8 is failing")
+        XCTAssert(deviceModel2 == .series8, "DeviceModel - .series8 is failing")
+        XCTAssert(deviceModel3 == .series8, "DeviceModel - .series8 is failing")
+        XCTAssert(deviceModel4 == .series8, "DeviceModel - .series8 is failing")
+    }
+    
+    func testDeviceModelWatchUltra() {
+        let deviceModel = DeviceModel(identifier: Identifier("Watch6,18"))
+        XCTAssert(deviceModel == .ultra, "DeviceModel - .ultra is failing")
+    }
+    
+    func testDeviceModelWatchSeries9() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch7,1"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch7,2"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("Watch7,3"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("Watch7,4"))
+        XCTAssert(deviceModel1 == .series9, "DeviceModel - .series9 is failing")
+        XCTAssert(deviceModel2 == .series9, "DeviceModel - .series9 is failing")
+        XCTAssert(deviceModel3 == .series9, "DeviceModel - .series9 is failing")
+        XCTAssert(deviceModel4 == .series9, "DeviceModel - .series9 is failing")
+    }
+    
+    func testDeviceModelWatchUltra2() {
+        let deviceModel = DeviceModel(identifier: Identifier("Watch7,5"))
+        XCTAssert(deviceModel == .ultra2, "DeviceModel - .ultra2 is failing")
+    }
+    
+    #endif
 }
