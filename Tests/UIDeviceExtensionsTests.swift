@@ -24,9 +24,17 @@
 @testable import UIDeviceComplete
 import XCTest
 
+#if os(watchOS)
+import WatchKit
+#endif
+
 class UIDeviceExtensionsTests: XCTestCase {
     
+    #if os(iOS)
     let DeviceExtensions = UIDeviceComplete(UIDevice())
+    #elseif os(watchOS)
+    let DeviceExtensions = UIDeviceComplete(WKInterfaceDevice())
+    #endif
     
     func testDeviceExtensionsDeviceFamily() {
         XCTAssertNotEqual(.unknown, DeviceExtensions.deviceFamily, "DeviceExtensions - .deviceFamily is failing")

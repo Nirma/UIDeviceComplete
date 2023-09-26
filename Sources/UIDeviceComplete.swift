@@ -21,7 +21,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+#if os(iOS)
 import UIKit
+#elseif os(watchOS)
+import WatchKit
+#endif
 
 public final class UIDeviceComplete<Base> {
     let base: Base
@@ -42,4 +46,8 @@ public extension UIDeviceCompleteCompatible {
     }
 }
 
+#if os(iOS)
 extension UIDevice: UIDeviceCompleteCompatible { }
+#elseif os(watchOS)
+extension WKInterfaceDevice: UIDeviceCompleteCompatible { }
+#endif

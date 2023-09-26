@@ -21,9 +21,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+#if os(iOS)
 import UIKit
+#endif
 
 public struct Screen {
+    #if os(iOS)
     init(width: Double, height: Double, scale: Double) {
         self.width = width
         self.height = height
@@ -37,9 +40,16 @@ public struct Screen {
     public var adjustedScale: Double {
         return 1.0 / scale
     }
+    #elseif os(watchOS)
+    init(identifier: Identifier) {
+        self.identifier = identifier
+    }
+    
+    let identifier: Identifier
+    #endif
 }
 
-
+#if os(iOS)
 // MARK: - Detecting Screen size in Inches
 
 extension Screen {
@@ -89,3 +99,33 @@ extension Screen {
     }
     
 }
+#endif
+
+#if os(watchOS)
+extension Screen {
+    public var caseSize: Int? {
+        guard let major = identifier.version.major,
+              let minor = identifier.version.minor
+        else { return nil }
+        
+        switch (major, minor) {
+        case (1, 1), (2, 3), (2, 6), (3, 1), (3, 3):        return 38
+        case (1, 2), (2, 4), (2, 7), (3, 2), (3, 4):        return 42
+            
+        case (4, 1), (4, 3), (5, 1), (5, 3), (5, 9),
+             (5, 11), (6, 1), (6, 3), (6, 10), (6, 12):     return 40
+        case (4, 2), (4, 4), (5, 2), (5, 4), (5, 10),
+             (5, 12), (6, 2), (6, 4), (6, 11), (6, 13):     return 44
+            
+        case (6, 6), (6, 8), (6, 14), (6, 16),
+             (7, 1), (7, 3):                                return 41
+        case (6, 7), (6, 9), (6, 15), (6, 17),
+             (7, 2), (7, 4):                                return 45
+            
+        case (6, 18), (7, 5):                               return 49
+            
+        default:                                            return nil
+        }
+    }
+}
+#endif

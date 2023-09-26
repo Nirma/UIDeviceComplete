@@ -69,6 +69,8 @@ extension Identifier: CustomStringConvertible {
             return iPadStringRepresentation(major: major, minor: minor)
         case .iPod:
             return iPodStringRepresentation(major: major, minor: minor)
+        case .watch:
+            return watchStringRepresentable(major: major, minor: minor)
         case .unknown:
             return "unknown"
         }
@@ -380,6 +382,101 @@ extension Identifier: CustomStringConvertible {
             return "6th Gen iPad mini (8.3 inch, Wi-Fi)"
         case (14, 2):
             return "6th Gen iPad mini (8.3 inch, Wi-Fi+5G)"
+        default:
+            return "unknown"
+        }
+    }
+    
+    private func watchStringRepresentable(major: Int, minor: Int) -> String {
+        switch (major, minor) {
+        case (1, 1):
+            return "Apple Watch (1st generation), 38mm case"
+        case (1, 2):
+            return "Apple Watch (1st generation), 42mm case"
+        case (2, 3):
+            return "Apple Watch Series 2, 38mm case"
+        case (2, 4):
+            return "Apple Watch Series 2, 42mm case"
+        case (2, 6):
+            return "Apple Watch Series 1, 38mm case"
+        case (2, 7):
+            return "Apple Watch Series 1, 42mm case"
+        case (3, 1):
+            return "Apple Watch Series 3, 38mm case (GPS + Cellular)"
+        case (3, 2):
+            return "Apple Watch Series 3, 42mm case (GPS + Cellular)"
+        case (3, 3):
+            return "Apple Watch Series 3, 38mm case (GPS)"
+        case (3, 4):
+            return "Apple Watch Series 3, 42mm case (GPS)"
+        case (4, 1):
+            return "Apple Watch Series 4, 40mm case (GPS)"
+        case (4, 2):
+            return "Apple Watch Series 4, 44mm case (GPS)"
+        case (4, 3):
+            return "Apple Watch Series 4, 40mm case (GPS + Cellular)"
+        case (4, 4):
+            return "Apple Watch Series 4, 44mm case (GPS + Cellular)"
+        case (5, 1):
+            return "Apple Watch Series 5, 40mm case (GPS)"
+        case (5, 2):
+            return "Apple Watch Series 5, 44mm case (GPS)"
+        case (5, 3):
+            return "Apple Watch Series 5, 40mm case (GPS + Cellular)"
+        case (5, 4):
+            return "Apple Watch Series 5, 44mm case (GPS + Cellular)"
+        case (5, 9):
+            return "Apple Watch SE, 40mm case (GPS)"
+        case (5, 10):
+            return "Apple Watch SE, 44mm case (GPS)"
+        case (5, 11):
+            return "Apple Watch SE, 40mm case (GPS + Cellular)"
+        case (5, 12):
+            return "Apple Watch SE, 44mm case (GPS + Cellular)"
+        case (6, 1):
+            return "Apple Watch Series 6, 40mm case (GPS)"
+        case (6, 2):
+            return "Apple Watch Series 6, 44mm case (GPS)"
+        case (6, 3):
+            return "Apple Watch Series 6, 40mm case (GPS + Cellular)"
+        case (6, 4):
+            return "Apple Watch Series 6, 44mm case (GPS + Cellular)"
+        case (6, 6):
+            return "Apple Watch Series 7, 41mm case (GPS)"
+        case (6, 7):
+            return "Apple Watch Series 7, 45mm case (GPS)"
+        case (6, 8):
+            return "Apple Watch Series 7, 41mm case (GPS + Cellular)"
+        case (6, 9):
+            return "Apple Watch Series 7, 45mm case (GPS + Cellular)"
+        case (6, 10):
+            return "Apple Watch SE (2nd Generation), 40mm case (GPS)"
+        case (6, 11):
+            return "Apple Watch SE (2nd Generation), 44mm case (GPS)"
+        case (6, 12):
+            return "Apple Watch SE (2nd Generation), 40mm case (GPS + Cellular)"
+        case (6, 13):
+            return "Apple Watch SE (2nd Generation), 44mm case (GPS + Cellular)"
+        case (6, 14):
+            return "Apple Watch Series 8, 41mm case (GPS)"
+        case (6, 15):
+            return "Apple Watch Series 8, 45mm case (GPS)"
+        case (6, 16):
+            return "Apple Watch Series 8, 41mm case (GPS + Cellular)"
+        case (6, 17):
+            return "Apple Watch Series 8, 45mm case (GPS + Cellular)"
+        case (6, 18):
+            return "Apple Watch Ultra"
+        case (7, 1):
+            return "Apple Watch Series 9, 41mm case (GPS)"
+        case (7, 2):
+            return "Apple Watch Series 9, 45mm case (GPS)"
+        case (7, 3):
+            return "Apple Watch Series 9, 41mm case (GPS + Cellular)"
+        case (7, 4):
+            return "Apple Watch Series 9, 45mm case (GPS + Cellular)"
+        case (7, 5):
+            return "Apple Watch Ultra 2"
         default:
             return "unknown"
         }

@@ -41,6 +41,11 @@ class DeviceFamilyTests: XCTestCase {
         XCTAssert(deviceFamily == .iPad, "DeviceFamily - .iPad is failing")
     }
     
+    func testDeviceFamilyWatch() {
+        let deviceFamily = DeviceFamily(rawValue: "Watch")
+        XCTAssert(deviceFamily == .watch, "DeviceFamily - .watch is failing")
+    }
+    
     func testInvalidDeviceFamily() {
         let deviceFamily = DeviceFamily(rawValue: "Apple II")
         XCTAssert(deviceFamily == .unknown, "DeviceFamily - .unknown is failing")
@@ -54,5 +59,5 @@ class DeviceFamilyTests: XCTestCase {
         XCTAssert(!(deviceFamily.isSimulator), "DeviceFamily - .isSimulator is failing")
         #endif
     }
-
+    
 }

@@ -25,7 +25,7 @@ import PackageDescription
 let package = Package(
     name: "UIDeviceComplete",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v11), .watchOS(.v4)
     ],
     products: [
         .library(name: "UIDeviceComplete", targets: ["UIDeviceComplete"])
