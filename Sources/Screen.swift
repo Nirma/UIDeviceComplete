@@ -68,7 +68,9 @@ extension Screen {
         case (1133, _): return 8.3
         case (1180, _): return 10.9
         case (1194, _): return 11.0
+        case (1210, _): return 11.0
         case (1366, _): return 12.9
+        case (1376, _): return 13.0
         default: return nil
         }
     }
