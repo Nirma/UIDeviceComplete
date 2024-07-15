@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EF4F1102C4569760013D8F0 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4EF4F10F2C4569760013D8F0 /* PrivacyInfo.xcprivacy */; };
 		AA1C219D1F385BEC0095BFBD /* DeviceFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C21961F385BEC0095BFBD /* DeviceFamily.swift */; };
 		AA1C219E1F385BEC0095BFBD /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C21971F385BEC0095BFBD /* DeviceModel.swift */; };
 		AA1C219F1F385BEC0095BFBD /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C21981F385BEC0095BFBD /* Identifier.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EF4F10F2C4569760013D8F0 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		AA1C21961F385BEC0095BFBD /* DeviceFamily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceFamily.swift; path = Sources/DeviceFamily.swift; sourceTree = SOURCE_ROOT; };
 		AA1C21971F385BEC0095BFBD /* DeviceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceModel.swift; path = Sources/DeviceModel.swift; sourceTree = SOURCE_ROOT; };
 		AA1C21981F385BEC0095BFBD /* Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Identifier.swift; path = Sources/Identifier.swift; sourceTree = SOURCE_ROOT; };
@@ -116,6 +118,7 @@
 		AAB1EF451F138685003BBCF2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4EF4F10F2C4569760013D8F0 /* PrivacyInfo.xcprivacy */,
 				AA1C21961F385BEC0095BFBD /* DeviceFamily.swift */,
 				AA1C21971F385BEC0095BFBD /* DeviceModel.swift */,
 				AA1C21981F385BEC0095BFBD /* Identifier.swift */,
@@ -223,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF4F1102C4569760013D8F0 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,7 +31,7 @@ let package = Package(
         .library(name: "UIDeviceComplete", targets: ["UIDeviceComplete"])
     ],
     targets: [
-        .target(name: "UIDeviceComplete", path: "Sources"),
+        .target(name: "UIDeviceComplete", resources: [.process("PrivacyInfo.xcprivacy")], path: "Sources"),
     ],
     swiftLanguageVersions: [.v5]
 )
