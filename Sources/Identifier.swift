@@ -355,9 +355,9 @@ extension Identifier: CustomStringConvertible {
         case (13, 7):
             return "3rd Gen iPad Pro (11 inch, Wi-Fi+5G, 16GB RAM)"
         case (14, 3):
-            return "4rd Gen iPad Pro (11 inch, Wi-Fi)"
+            return "4th Gen iPad Pro (11 inch, Wi-Fi)"
         case (14, 4):
-            return "4rd Gen iPad Pro (11 inch, Wi-Fi+5G)"
+            return "4th Gen iPad Pro (11 inch, Wi-Fi+5G)"
         case (13, 8):
             return "5th Gen iPad Pro (12.9 inch, Wi-Fi)"
         case (13, 9):
