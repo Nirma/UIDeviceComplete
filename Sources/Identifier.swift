@@ -389,6 +389,24 @@ extension Identifier: CustomStringConvertible {
         case (14, 6):
             return "6th Gen iPad Pro (12.9 inch, Wi-Fi+5G)"
             
+        case (14, 8):
+            return "iPad Air M2 (11 inch, Wi-Fi)"
+        case (14, 9):
+            return "iPad Air M2 (11 inch, Wi-Fi+5G)"
+        case (14, 10):
+            return "iPad Air M2 (13 inch, Wi-Fi)"
+        case (14, 11):
+            return "iPad Air M2 (13 inch, Wi-Fi+5G)"
+            
+        case (16, 3):
+            return "iPad Pro M4 (11 inch, Wi-Fi)"
+        case (16, 4):
+            return "iPad Pro M4 (11 inch, Wi-Fi+5G)"
+        case (16, 5):
+            return "iPad Pro M4 (13 inch, Wi-Fi)"
+        case (16, 6):
+            return "iPad Pro M4 (13 inch, Wi-Fi+5G)"
+            
         default:
             return "unknown"
         }
