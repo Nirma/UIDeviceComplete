@@ -83,4 +83,11 @@ public extension UIDeviceComplete where Base == DCDevice {
         return Screen(width: width, height: height, scale: scale)
     }
 }
+#elseif os(watchOS)
+public extension UIDeviceComplete where Base == WKInterfaceDevice {
+    var screenSize: Screen? {
+        guard let identifier else { return nil }
+        return Screen(identifier: identifier)
+    }
+}
 #endif
