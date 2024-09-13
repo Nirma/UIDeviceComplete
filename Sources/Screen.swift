@@ -106,28 +106,53 @@ extension Screen {
 #if os(watchOS)
 extension Screen {
     public var caseSize: Int? {
+        switch size {
+        case .small(let mm):
+            return mm
+        case .medium(let mm):
+            return mm
+        case .ultra(let mm):
+            return mm
+        default:
+            return nil
+        }
+    }
+    
+    public var size: Size? {
         guard let major = identifier.version.major,
               let minor = identifier.version.minor
         else { return nil }
         
         switch (major, minor) {
-        case (1, 1), (2, 3), (2, 6), (3, 1), (3, 3):        return 38
-        case (1, 2), (2, 4), (2, 7), (3, 2), (3, 4):        return 42
+        case (1, 1), (2, 3), (2, 6), (3, 1), (3, 3):        return .small(mm: 38)
+        case (1, 2), (2, 4), (2, 7), (3, 2), (3, 4):        return .medium(mm: 42)
             
         case (4, 1), (4, 3), (5, 1), (5, 3), (5, 9),
-             (5, 11), (6, 1), (6, 3), (6, 10), (6, 12):     return 40
+             (5, 11), (6, 1), (6, 3), (6, 10), (6, 12):     return .small(mm: 40)
         case (4, 2), (4, 4), (5, 2), (5, 4), (5, 10),
-             (5, 12), (6, 2), (6, 4), (6, 11), (6, 13):     return 44
+             (5, 12), (6, 2), (6, 4), (6, 11), (6, 13):     return .medium(mm: 44)
             
         case (6, 6), (6, 8), (6, 14), (6, 16),
-             (7, 1), (7, 3):                                return 41
+             (7, 1), (7, 3):                                return .small(mm: 41)
         case (6, 7), (6, 9), (6, 15), (6, 17),
-             (7, 2), (7, 4):                                return 45
+             (7, 2), (7, 4):                                return .medium(mm: 45)
             
-        case (6, 18), (7, 5):                               return 49
+        case (6, 18), (7, 5):                               return .ultra(mm: 49)
+            
+        case (7, 8), (7, 10):                               return .small(mm: 42)
+        case (7, 9), (7, 11):                               return .medium(mm: 46)
             
         default:                                            return nil
         }
+    }
+    
+    public enum Size {
+        /// The smaller Apple Watch size (traditionally: 38/40/41mm)
+        case small(mm: Int)
+        /// The larger Apple Watch size (traditionally: 42/44/45mm)
+        case medium(mm: Int)
+        /// Apple Watch Ultra size
+        case ultra(mm: Int)
     }
 }
 #endif

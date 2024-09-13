@@ -85,6 +85,7 @@ public enum DeviceModel: CaseIterable {
     case ultra
     case series9
     case ultra2
+    case series10
     #endif
     
     case unknown
@@ -300,7 +301,7 @@ extension DeviceModel {
         case (6, 18):                               return .ultra
         case (7, 1), (7, 2), (7, 3), (7, 4):        return .series9
         case (7, 5):                                return .ultra2
-            
+        case (7, 8), (7, 9), (7, 10), (7, 11):      return .series10
         default:                                    return .unknown
         }
     }
