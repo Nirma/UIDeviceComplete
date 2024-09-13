@@ -790,5 +790,21 @@ class IdentifierTests: XCTestCase {
         XCTAssert(Identifier("Watch7,5").description == "Apple Watch Ultra 2", "Watch7,5 is failing to produce a common device model string")
     }
     
+    func testDisplayStringWatch7v8() {
+        XCTAssert(Identifier("Watch7,8").description == "Apple Watch Series 10, 42mm case (GPS)", "Watch7,8 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch7v9() {
+        XCTAssert(Identifier("Watch7,9").description == "Apple Watch Series 10, 46mm case (GPS)", "Watch7,9 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch7v10() {
+        XCTAssert(Identifier("Watch7,10").description == "Apple Watch Series 10, 42mm case (GPS + Cellular)", "Watch7,10 is failing to produce a common device model string")
+    }
+    
+    func testDisplayStringWatch7v11() {
+        XCTAssert(Identifier("Watch7,11").description == "Apple Watch Series 10, 46mm case (GPS + Cellular)", "Watch7,11 is failing to produce a common device model string")
+    }
+    
     #endif
 }

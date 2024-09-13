@@ -647,5 +647,16 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel == .ultra2, "DeviceModel - .ultra2 is failing")
     }
     
+    func testDeviceModelWatchSeries10() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("Watch7,8"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("Watch7,9"))
+        let deviceModel3 = DeviceModel(identifier: Identifier("Watch7,10"))
+        let deviceModel4 = DeviceModel(identifier: Identifier("Watch7,11"))
+        XCTAssert(deviceModel1 == .series10, "DeviceModel - .series10 is failing")
+        XCTAssert(deviceModel2 == .series10, "DeviceModel - .series10 is failing")
+        XCTAssert(deviceModel3 == .series10, "DeviceModel - .series10 is failing")
+        XCTAssert(deviceModel4 == .series10, "DeviceModel - .series10 is failing")
+    }
+    
     #endif
 }
