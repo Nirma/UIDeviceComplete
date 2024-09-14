@@ -1,11 +1,11 @@
 name: Swift CI
+run-name: Build smoke test by ${{ github.actor }}
 
 on: [push, pull_request]
 
 jobs:
   test:
     name: Test UIDeviceComplete
-    run-name: Build smoke test by ${{ github.actor }}
     runs-on: macos-14-arm64 
     env:
       DEVELOPER_DIR: /Applications/Xcode_16_beta_6.app/Contents/Developer
