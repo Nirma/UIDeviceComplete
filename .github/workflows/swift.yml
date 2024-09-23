@@ -1,16 +1,17 @@
 name: Swift CI
+run-name: Build smoke test by ${{ github.actor }}
 
 on: [push, pull_request]
 
 jobs:
   test:
     name: Test UIDeviceComplete
-    runs-on: macos-latest
+    runs-on: macos-14
     env:
-      DEVELOPER_DIR: /Applications/Xcode_14.0.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_16.app 
     steps:
     - uses: actions/checkout@v2
     - name: Test (iOS)
-      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "UIDeviceComplete.xcodeproj" -scheme "UIDeviceComplete" -destination "OS=16.0,name=iPhone 14 Pro" clean test | xcpretty
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "UIDeviceComplete.xcodeproj" -scheme "UIDeviceComplete" -destination "OS=18.0,name=iPhone 15 Pro Max" clean test | xcpretty
     - name: Test (watchOS)
-      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "UIDeviceComplete.xcodeproj" -scheme "UIDeviceComplete" -destination "OS=9.0,name=Apple Watch Series 8 (45mm)" clean test | xcpretty
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "UIDeviceComplete.xcodeproj" -scheme "UIDeviceComplete" -destination "OS=10.4,name=Apple Watch Series 8 (45mm)" clean test | xcpretty
