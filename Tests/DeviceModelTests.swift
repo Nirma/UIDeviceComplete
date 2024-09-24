@@ -242,6 +242,26 @@ class DeviceModelTests: XCTestCase {
         XCTAssert(deviceModel == .iPhone15ProMax , "DeviceModel - .iPhone15ProMax is failing")
     }
     
+    func testDeviceModelIPhone16() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone17,3"))
+        XCTAssert(deviceModel == .iPhone16, "DeviceModel - .iPhone16 is failing")
+    }
+    
+    func testDeviceModelIPhone16Plus() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone17,4"))
+        XCTAssert(deviceModel == .iPhone16Plus, "DeviceModel - .iPhone16Plus is failing")
+    }
+    
+    func testDeviceModelIPhone16Pro() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone17,1"))
+        XCTAssert(deviceModel == .iPhone16Pro, "DeviceModel - .iPhone16Pro is failing")
+    }
+    
+    func testDeviceModelIPhone16ProMax() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone17,2"))
+        XCTAssert(deviceModel == .iPhone16ProMax, "DeviceModel - .iPhone16ProMax is failing")
+    }
+    
     // MARK: - iPad Device Model tests
     
     func testDeviceModelIPadFirstGen() {
@@ -523,7 +543,8 @@ class DeviceModelTests: XCTestCase {
     
     func testHasDynamicIsland() {
         let withModels: [DeviceModel] = [.iPhone14Pro, .iPhone14ProMax,
-                                         .iPhone15, .iPhone15Plus, .iPhone15Pro, .iPhone15ProMax]
+                                         .iPhone15, .iPhone15Plus, .iPhone15Pro, .iPhone15ProMax,
+                                         .iPhone16, .iPhone16Plus, .iPhone16Pro, .iPhone16ProMax]
 
         let withoutModels: [DeviceModel] = DeviceModel.allCases.filter( { !withModels.contains($0) })
 
