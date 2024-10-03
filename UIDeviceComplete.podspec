@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'UIDeviceComplete'
-  s.version          = '3.0.0'
+  s.version          = '3.1.0'
   s.summary          = 'UIDevice extensions for device Model, Family, Screen size and more'
  
   s.description      = <<-DESC
