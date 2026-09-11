@@ -44,12 +44,13 @@ public enum DeviceModel: CaseIterable {
     case iPhone14Pro, iPhone14ProMax
     case iPhone15, iPhone15Plus
     case iPhone15Pro, iPhone15ProMax
+    case iPhone16e
     case iPhone16, iPhone16Plus
     case iPhone16Pro, iPhone16ProMax
-    case iPhone16e
-    case iPhoneAir
     case iPhone17
+    case iPhone17e
     case iPhone17Pro, iPhone17ProMax
+    case iPhoneAir
 
     case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen, iPadSixthGen, iPadSeventhGen, iPadEighthGen, iPadNinthGen, iPadTenthGen
     case iPadA16
@@ -194,13 +195,13 @@ extension DeviceModel {
         case (17, 2):           return .iPhone16ProMax
         case (17, 3):           return .iPhone16
         case (17, 4):           return .iPhone16Plus
-            
         case (17, 5):           return .iPhone16e
-        
+
+        case (18, 3):           return .iPhone17
         case (18, 1):           return .iPhone17Pro
         case (18, 2):           return .iPhone17ProMax
-        case (18, 3):           return .iPhone17
         case (18, 4):           return .iPhoneAir
+        case (18, 5):           return .iPhone17e
         
         default:                return .unknown
         }
@@ -230,7 +231,7 @@ extension DeviceModel {
         case (12, 1), (12, 2):                return .iPadNinthGen                
         case (13, 18), (13, 19):              return .iPadTenthGen
         case (15, 7), (15, 8):                return .iPadA16
-            
+
         case (4, 1), (4, 2), (4, 3):          return .iPadAir
         case (5, 3), (5, 4):                  return .iPadAir2
         case (11, 3), (11, 4):                return .iPadAir3
@@ -248,7 +249,7 @@ extension DeviceModel {
         case (11, 1), (11, 2):                return .iPadMini5
         case (14, 1), (14, 2):                return .iPadMini6
         case (16, 1), (16, 2):                return .iPadMiniA17Pro
-            
+
         case (6, 3), (6, 4):                  return .iPadPro9_7Inch
         case (7, 3), (7, 4):                  return .iPadPro10_5Inch
         case (8, 1), (8, 2), (8, 3), (8, 4):  return .iPadPro11Inch
@@ -351,6 +352,9 @@ extension DeviceModel {
             return true
         case .iPhone16e:
             return true
+        case .iPhone17e:
+            return true
+            
         default:
           return false
         }
@@ -364,7 +368,7 @@ extension DeviceModel {
             return true
         case .iPhone16, .iPhone16Plus, .iPhone16Pro, .iPhone16ProMax:
             return true
-        case .iPhone17, .iPhoneAir, .iPhone17Pro, .iPhone17ProMax:
+        case .iPhoneAir, .iPhone17, .iPhone17Pro, .iPhone17ProMax:
             return true
         default:
           return false
@@ -372,3 +376,4 @@ extension DeviceModel {
     }
 }
 #endif
+

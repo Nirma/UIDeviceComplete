@@ -189,7 +189,9 @@ extension Identifier: CustomStringConvertible {
             return "iPhone 15 Pro"
         case (16, 2):
             return "iPhone 15 Pro Max"
-            
+        
+        case (17, 5):
+            return "iPhone 16e"
         case (17, 3):
             return "iPhone 16"
         case (17, 4):
@@ -198,10 +200,7 @@ extension Identifier: CustomStringConvertible {
             return "iPhone 16 Pro"
         case (17, 2):
             return "iPhone 16 Pro Max"
-        
-        case (17, 5):
-            return "iPhone 16e"
-        
+
         case (18, 3):
             return "iPhone 17"
         case (18, 4):
@@ -210,6 +209,9 @@ extension Identifier: CustomStringConvertible {
             return "iPhone 17 Pro"
         case (18, 2):
             return "iPhone 17 Pro Max"
+        case (18, 5):
+            return "iPhone 17e"
+            
             
         default:
             return "unknown"
@@ -447,8 +449,6 @@ extension Identifier: CustomStringConvertible {
         case (15, 7):
             return "iPad Air M3 (13 inch, Wi-Fi+5G)"
             
-
-            
         default:
             return "unknown"
         }
@@ -575,3 +575,4 @@ extension Identifier: CustomStringConvertible {
         }
     }
 }
+
