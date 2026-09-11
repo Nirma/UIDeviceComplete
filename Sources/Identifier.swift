@@ -212,6 +212,14 @@ extension Identifier: CustomStringConvertible {
         case (18, 5):
             return "iPhone 17e"
             
+        case (19, 2):
+            return "iPhone 18 Pro"
+        case (19, 3):
+            return "iPhone 18 Pro Max" // Qualcomm modem, sold in the US only?
+        case (19, 4):
+            return "iPhone Duo"
+        case (19, 7):
+            return "iPhone 18 Pro Max" // Apple C2 modem, sold internationally?
             
         default:
             return "unknown"
