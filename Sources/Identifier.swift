@@ -570,6 +570,16 @@ extension Identifier: CustomStringConvertible {
             return "Apple Watch Series 11, 42mm case (GPS + Cellular)"
         case (7, 20):
             return "Apple Watch Series 11, 46mm case (GPS + Cellular)"
+        case (8, 1):
+            return "Apple Watch Ultra 4"
+        case (8, 2):
+            return "Apple Watch Series 12, 42mm case (GPS)"
+        case (8, 3):
+            return "Apple Watch Series 12, 46mm case (GPS)"
+        case (8, 4):
+            return "Apple Watch Series 12, 42mm case (GPS + Cellular)"
+        case (8, 5):
+            return "Apple Watch Series 12, 46mm case (GPS + Cellular)"
         default:
             return "unknown"
         }
