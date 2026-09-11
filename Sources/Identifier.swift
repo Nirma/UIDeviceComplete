@@ -456,6 +456,24 @@ extension Identifier: CustomStringConvertible {
             return "iPad Air M3 (13 inch, Wi-Fi)"
         case (15, 7):
             return "iPad Air M3 (13 inch, Wi-Fi+5G)"
+        
+        case (16, 8):
+            return "iPad Air M4 (11 inch, Wi-Fi)"
+        case (16, 9):
+            return "iPad Air M4 (11 inch, Wi-Fi+5G)"
+        case (16, 10):
+            return "iPad Air M4 (13 inch, Wi-Fi)"
+        case (16, 11):
+            return "iPad Air M4 (13 inch, Wi-Fi+5G)"
+            
+        case (17, 1):
+            return "iPad Pro M5 (11 inch, Wi-Fi)"
+        case (17, 2):
+            return "iPad Pro M5 (11 inch, Wi-Fi+5G)"
+        case (17, 3):
+            return "iPad Pro M5 (13 inch, Wi-Fi)"
+        case (17, 4):
+            return "iPad Pro M5 (13 inch, Wi-Fi+5G)"
             
         default:
             return "unknown"
