@@ -51,6 +51,8 @@ public enum DeviceModel: CaseIterable {
     case iPhone17e
     case iPhone17Pro, iPhone17ProMax
     case iPhoneAir
+    case iPhone18Pro, iPhone18ProMax
+    case iPhoneDuo
 
     case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen, iPadSixthGen, iPadSeventhGen, iPadEighthGen, iPadNinthGen, iPadTenthGen
     case iPadA16
@@ -97,6 +99,8 @@ public enum DeviceModel: CaseIterable {
     case series11
     case ultra3
     case se3
+    case series12
+    case ultra4
     #endif
     
     case unknown
@@ -202,6 +206,11 @@ extension DeviceModel {
         case (18, 3):           return .iPhone17
         case (18, 4):           return .iPhoneAir
         case (18, 5):           return .iPhone17e
+            
+        case (19, 2):           return .iPhone18Pro
+        case (19, 3):           return .iPhone18ProMax // Qualcomm modem, sold in the US only?
+        case (19, 4):           return .iPhoneDuo
+        case (19, 7):           return .iPhone18ProMax // Apple C2 modem, sold internationally?
         
         default:                return .unknown
         }
@@ -328,6 +337,8 @@ extension DeviceModel {
         case (7, 17), (7, 18), (7, 19), (7, 20):    return .series11
         case (7, 12):                               return .ultra3
         case (7, 13), (7, 14), (7, 15), (7, 16):    return .se3
+        case (8, 1):                                return .ultra4
+        case (8, 2), (8, 3), (8, 4), (8, 5):        return .series12
         default:                                    return .unknown
         }
     }
@@ -370,8 +381,19 @@ extension DeviceModel {
             return true
         case .iPhoneAir, .iPhone17, .iPhone17Pro, .iPhone17ProMax:
             return true
+        case .iPhone18Pro, .iPhone18ProMax:
+            return true
         default:
           return false
+        }
+    }
+    
+    public var isFoldable: Bool {
+        switch self {
+        case .iPhoneDuo:
+            return true
+        default:
+            return false
         }
     }
 }
