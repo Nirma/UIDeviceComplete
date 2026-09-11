@@ -139,10 +139,12 @@ extension Screen {
         case (6, 7), (6, 9), (6, 15), (6, 17),
              (7, 2), (7, 4):                                return .medium(mm: 45)
             
-        case (6, 18), (7, 5), (7, 12):                      return .ultra(mm: 49)
+        case (6, 18), (7, 5), (7, 12), (8, 1):              return .ultra(mm: 49)
             
-        case (7, 8), (7, 10), (7, 17), (7, 19):             return .small(mm: 42)
-        case (7, 9), (7, 11), (7, 18), (7, 20):             return .medium(mm: 46)
+        case (7, 8), (7, 10), (7, 17), (7, 19),
+             (8, 2), (8, 4):                                return .small(mm: 42)
+        case (7, 9), (7, 11), (7, 18), (7, 20),
+             (8, 3), (8, 5):                                return .medium(mm: 46)
             
         default:                                            return nil
         }
