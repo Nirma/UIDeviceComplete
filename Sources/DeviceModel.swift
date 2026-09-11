@@ -197,9 +197,9 @@ extension DeviceModel {
         case (17, 4):           return .iPhone16Plus
         case (17, 5):           return .iPhone16e
 
-        case (18, 3):           return .iPhone17
         case (18, 1):           return .iPhone17Pro
         case (18, 2):           return .iPhone17ProMax
+        case (18, 3):           return .iPhone17
         case (18, 4):           return .iPhoneAir
         case (18, 5):           return .iPhone17e
         
