@@ -551,8 +551,9 @@ class DeviceModelTests: XCTestCase {
         let withModels: [DeviceModel] = [.iPhone14Pro, .iPhone14ProMax,
                                          .iPhone15, .iPhone15Plus, .iPhone15Pro, .iPhone15ProMax,
                                          .iPhone16, .iPhone16Plus, .iPhone16Pro, .iPhone16ProMax,
-                                         .iPhone17, .iPhoneAir, .iPhone17Pro, .iPhone17ProMax]
-
+                                         .iPhone17, .iPhoneAir, .iPhone17Pro, .iPhone17ProMax,
+                                         .iPhone18Pro, .iPhone18ProMax]
+      
         let withoutModels: [DeviceModel] = DeviceModel.allCases.filter( { !withModels.contains($0) })
 
         withModels.forEach { XCTAssertTrue($0.hasDynamicIsland) }

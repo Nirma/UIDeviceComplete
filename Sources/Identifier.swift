@@ -212,6 +212,14 @@ extension Identifier: CustomStringConvertible {
         case (18, 5):
             return "iPhone 17e"
             
+        case (19, 2):
+            return "iPhone 18 Pro"
+        case (19, 3):
+            return "iPhone 18 Pro Max" // Qualcomm modem, sold in the US only?
+        case (19, 4):
+            return "iPhone Duo"
+        case (19, 7):
+            return "iPhone 18 Pro Max" // Apple C2 modem, sold internationally?
             
         default:
             return "unknown"
@@ -448,6 +456,24 @@ extension Identifier: CustomStringConvertible {
             return "iPad Air M3 (13 inch, Wi-Fi)"
         case (15, 7):
             return "iPad Air M3 (13 inch, Wi-Fi+5G)"
+        
+        case (16, 8):
+            return "iPad Air M4 (11 inch, Wi-Fi)"
+        case (16, 9):
+            return "iPad Air M4 (11 inch, Wi-Fi+5G)"
+        case (16, 10):
+            return "iPad Air M4 (13 inch, Wi-Fi)"
+        case (16, 11):
+            return "iPad Air M4 (13 inch, Wi-Fi+5G)"
+            
+        case (17, 1):
+            return "iPad Pro M5 (11 inch, Wi-Fi)"
+        case (17, 2):
+            return "iPad Pro M5 (11 inch, Wi-Fi+5G)"
+        case (17, 3):
+            return "iPad Pro M5 (13 inch, Wi-Fi)"
+        case (17, 4):
+            return "iPad Pro M5 (13 inch, Wi-Fi+5G)"
             
         default:
             return "unknown"
@@ -570,6 +596,16 @@ extension Identifier: CustomStringConvertible {
             return "Apple Watch Series 11, 42mm case (GPS + Cellular)"
         case (7, 20):
             return "Apple Watch Series 11, 46mm case (GPS + Cellular)"
+        case (8, 1):
+            return "Apple Watch Ultra 4"
+        case (8, 2):
+            return "Apple Watch Series 12, 42mm case (GPS)"
+        case (8, 3):
+            return "Apple Watch Series 12, 46mm case (GPS)"
+        case (8, 4):
+            return "Apple Watch Series 12, 42mm case (GPS + Cellular)"
+        case (8, 5):
+            return "Apple Watch Series 12, 46mm case (GPS + Cellular)"
         default:
             return "unknown"
         }
